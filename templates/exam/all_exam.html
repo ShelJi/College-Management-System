@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div
+		class="container mx-auto my-10 p-6 max-w-6xl bg-white shadow-lg rounded-lg"
+		style="padding: 100px"
+	>
+		<h2 class="text-2xl font-semibold text-center mb-6">Exam List</h2>
+
+		{% if exams %}
+		<table class="w-full border-collapse border border-gray-300 shadow-md" style="margin: 30px">
+			<thead>
+				<tr class="bg-gray-200">
+					<th class="border border-gray-300 p-3 text-left">Exam ID</th>
+					<th class="border border-gray-300 p-3 text-left">Semester</th>
+					<th class="border border-gray-300 p-3 text-left">Department</th>
+					<th class="border border-gray-300 p-3 text-left">Date</th>
+					<th class="border border-gray-300 p-3 text-left">Start Time</th>
+					<th class="border border-gray-300 p-3 text-left">End Time</th>
+					<th class="border border-gray-300 p-3 text-left">Status</th>
+					<th class="border border-gray-300 p-3 text-left">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for exam in exams %}
+				<tr class="border border-gray-300">
+					<td class="p-3">{{ exam.exam_id }}</td>
+					<td class="p-3">{{ exam.semester }}</td>
+					<td class="p-3">{{ exam.department }}</td>
+					<td class="p-3">{{ exam.date }}</td>
+					<td class="p-3">{{ exam.start_time }}</td>
+					<td class="p-3">{{ exam.end_time }}</td>
+					<td
+						class="p-3 {% if exam.status %}text-green-600{% else %}text-red-600{% endif %} font-semibold"
+					>
+						{% if exam.status %} Active {% else %} Inactive {% endif %}
+					</td>
+					<td class="p-3"><a href="{% url 'exam:view_exam' exam.pk %}">View</a></td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% else %}
+		<p class="text-center text-gray-500 text-lg mt-6">No exams found.</p>
+		{% endif %}
+	</div>
+	<a href="{% url 'exam:create_exam' %}" class="btn btn-primary m-3"> Create Exam </a>
+</div>
+{% endblock body %}

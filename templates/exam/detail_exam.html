@@ -1,0 +1,76 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div class="container mt-5">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="card shadow">
+					<div class="card-header bg-info text-white text-center">
+						<h4>Exam Details</h4>
+					</div>
+					<div class="card-body">
+						<h5><strong>Semester:</strong> {{ exam.semester }}</h5>
+						<p><strong>Exam ID:</strong> {{ exam.exam_id }}</p>
+						<p><strong>Date:</strong> {{ exam.date }}</p>
+						<p><strong>Start Time:</strong> {{ exam.start_time }}</p>
+						<p><strong>End Time:</strong> {{ exam.end_time }}</p>
+						<p><strong>Total Marks:</strong> {{ exam.total_marks }}</p>
+						<p>
+							<strong>Status:</strong>
+							<span
+								class="badge {% if exam.status %}bg-success{% else %}bg-danger{% endif %}"
+							>
+								{% if exam.status %}Active{% else %}Inactive{% endif %}
+							</span>
+						</p>
+
+						<h5 class="mt-3">Subjects</h5>
+						<ul class="list-group">
+							{% if exam.subject1 %}
+							<p>Subject 1: {{ exam.subject1 }}</p>
+							{% endif %} {% if exam.subject2 %}
+							<p>Subject 2: {{ exam.subject2 }}</p>
+							{% endif %} {% if exam.subject3 %}
+							<p>Subject 3: {{ exam.subject3 }}</p>
+							{% endif %} {% if exam.subject4 %}
+							<p>Subject 4: {{ exam.subject4 }}</p>
+							{% endif %} {% if exam.subject5 %}
+							<p>Subject 5: {{ exam.subject5 }}</p>
+							{% endif %} {% if exam.subject6 %}
+							<p>Subject 6: {{ exam.subject6 }}</p>
+							{% endif %} {% if exam.subject7 %}
+							<p>Subject 7: {{ exam.subject7 }}</p>
+							{% endif %} {% if exam.subject8 %}
+							<p>Subject 8: {{ exam.subject8 }}</p>
+							{% endif %} {% if exam.subject9 %}
+							<p>Subject 9: {{ exam.subject9 }}</p>
+							{% endif %}
+						</ul>
+
+						<div class="text-center mt-4">
+							{% if request.user.is_staff %}
+							<a href="{% url 'exam:all_exam' %}" class="btn btn-secondary"
+								>Back to List</a
+							>
+							{% else %}
+							<a href="{% url 'exam:student_exam' %}" class="btn btn-secondary"
+								>Back to List</a
+							>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

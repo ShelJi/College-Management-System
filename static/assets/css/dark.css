@@ -1,0 +1,326 @@
+body,
+body .courses-one__single,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-theme .owl-dots .owl-dot span,
+.boxed-wrapper .page-wrapper {
+    background-color: var(--fistudy-black);
+}
+
+
+
+.testimonial-one__social a,
+.testimonial-one__ratting,
+.why-choose-one__points-icon,
+.why-choose-one__shape-2,
+.about-one__awards-box,
+.about-one__experience-box-inner,
+.banner-one__student-trained,
+.banner-one__udemy-review,
+.banner-one__category-select-box .select-box .nice-select,
+.banner-one__category-input input[type="search"],
+.main-menu__category-sub-menu {
+    background-color: #011834;
+}
+
+
+
+
+
+
+
+.blog-one,
+.why-choose-one__client-box,
+.courses-one {
+    background: #011834;
+}
+
+
+
+
+
+
+
+
+
+.blog-one__user-name,
+.blog-one__title a,
+.blog-one__meta li a,
+.live-class-one__class-time-text,
+.live-class-one__title a,
+.live-class-one__carousel.owl-theme .owl-nav .owl-prev,
+.live-class-one__carousel.owl-theme .owl-nav .owl-next,
+.testimonial-one__social a,
+.testimonial-one__text,
+.testimonial-one__client-sub-title,
+.testimonial-one__client-name a,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.courses-one__title a,
+.about-one__icon-and-title h3,
+.section-title__title,
+.section-title__tagline,
+.about-one__awards-count-box h3,
+.about-one__awards-count-box span,
+.about-one__awards-box p,
+.about-one__experience-count h3,
+.about-one__experience-count span,
+.about-one__experience-count-box>p,
+.about-one__experience-count>p,
+.owl-theme .owl-dots .owl-dot span::before,
+.team-one__title a,
+.banner-one__title,
+.banner-one__student-trained-count-box-inner p,
+.banner-one__student-trained-count-box-inner span,
+.banner-one__student-trained-text,
+.main-menu__category-btn i,
+.main-menu__category-btn p,
+.main-menu__category-btn span,
+.main-menu__category-content h5,
+.main-menu .main-menu__list>li>a,
+.stricky-header .main-menu__list>li>a {
+    color: var(--fistudy-white);
+}
+
+
+
+
+
+
+
+
+
+
+.about-one__awards-box::before {
+    border: 1px dashed var(--fistudy-black);
+}
+
+
+
+
+.team-one__single,
+.blog-one__single,
+.live-class-one__carousel.owl-theme .owl-nav .owl-prev,
+.live-class-one__carousel.owl-theme .owl-nav .owl-next,
+.testimonial-one__social a,
+.testimonial-one__ratting,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-theme .owl-dots .owl-dot span,
+.courses-one__heart a,
+.courses-one__single {
+    border: 1px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+
+
+.blog-one__meta,
+.courses-one__ratting-and-heart-box {
+    border-bottom: 1px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+
+
+
+.video-one__img-box>img,
+.why-choose-one__client-box {
+    border: 3px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+
+.video-one__img-box>img {
+    border: 3px solid rgba(var(--fistudy-white-rgb), .30);
+}
+
+
+.testimonial-one__img-inner {
+    border: 1px dashed rgba(var(--fistudy-white-rgb), .20);
+}
+
+
+.why-choose-one__points-list::before,
+.why-choose-one__points-icon-inner {
+    background-color: rgba(var(--fistudy-white-rgb), .10);
+}
+
+
+
+
+.section-title__title span img,
+.about-one__live-class img {
+    filter: invert(1);
+}
+
+
+
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover,
+.about-one .thm-btn:hover::before,
+.why-choose-one .thm-btn:hover::before,
+.blog-one .thm-btn:hover::before,
+.courses-one .thm-btn:hover::before {
+    background-color: var(--fistudy-white);
+}
+
+
+
+
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover,
+.why-choose-one .thm-btn:hover,
+.blog-one .thm-btn:hover,
+.about-one .thm-btn:hover,
+.courses-one .thm-btn:hover {
+    color: var(--fistudy-base);
+}
+
+
+
+
+.why-choose-one__shape-7 img,
+.why-choose-one__shape-5 img,
+.why-choose-one__shape-6 img,
+.about-one__shape-2 img,
+.about-one__shape-1 img {
+    filter: brightness(0.5);
+    opacity: .5;
+}
+
+
+
+
+.video-one__shape-4 img,
+.video-one__shape-3 img,
+.team-one__shape-4,
+.team-one__shape-2 img {
+    filter: brightness(0.5);
+}
+
+
+
+
+
+.testimonial-one__shape-2 img {
+    filter: invert(1);
+    opacity: 0.05;
+}
+
+
+
+
+
+.newsletter-one__bg-shape {
+    mix-blend-mode: darken;
+}
+
+.newsletter-one__inner {
+    background: none;
+    background-color: #011834;
+}
+
+.newsletter-one__contact-input-box input[type="email"] {
+    background-color: var(--fistudy-black);
+    border: 3px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+.team-one__single-bg-shape {
+    filter: invert(1);
+}
+
+.team-one__content-shape-2 img {
+    opacity: .25;
+}
+
+
+
+.banner-one {
+    background-color: var(--fistudy-black);
+}
+
+.banner-one__bg-shape-1 {
+    mix-blend-mode: multiply;
+}
+
+.banner-one__other-btn-1 {
+    color: var(--fistudy-white);
+    border: 1px solid rgba(var(--fistudy-white-rgb), .10);
+    background-color: #011834;
+}
+
+.banner-one__udemy-review-logo img {
+    filter: invert(1);
+}
+
+.banner-one__category-input input[type="search"] {
+    border-left: 1px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+.banner-one__tags a {
+    border: 1px solid rgba(var(--fistudy-white-rgb), .10);
+    color: var(--fistudy-white);
+    background-color: #011834;
+}
+
+.main-menu__category-btn {
+    border: 1px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+.main-menu__category-sub-menu li a {
+    border: 1px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+.main-menu__search,
+.main-menu__cart a {
+    border: 1px solid var(--fistudy-white);
+    color: var(--fistudy-white);
+}
+
+.main-menu__search:hover,
+.main-menu__cart a:hover {
+    border: 1px solid var(--fistudy-base);
+}
+
+.main-menu__btn-box-1 .thm-btn {
+    background-color: #011834;
+    color: var(--fistudy-white);
+    border: 1px solid rgba(var(--fistudy-white-rgb), .10);
+}
+
+.main-menu__btn-box-2 .thm-btn:hover::before {
+    background-color: rgba(var(--fistudy-white-rgb), 1);
+}
+
+.main-menu__btn-box-2 .thm-btn:hover {
+    color: var(--fistudy-black);
+}
+
+.main-menu__wrapper:before {
+    border-bottom: 1px dashed rgba(var(--fistudy-white-rgb), .10);
+}
+
+.main-menu__category-sub-menu li a:hover .main-menu__category-content h5 {
+    color: var(--fistudy-black);
+}
+
+.stricky-header.main-menu {
+    background-color: var(--fistudy-black);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The End */

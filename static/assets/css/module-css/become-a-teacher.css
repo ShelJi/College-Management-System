@@ -1,0 +1,160 @@
+/*--------------------------------------------------------------
+# Become A Teacher
+--------------------------------------------------------------*/
+.become-a-teacher {
+    position: relative;
+    display: block;
+    padding: 120px 0 120px;
+}
+
+.become-a-teacher__top {
+    position: relative;
+    display: block;
+}
+
+.become-a-teacher__tab-box {
+    position: relative;
+    display: block;
+}
+
+.become-a-teacher__tab-box .tab-buttons {
+    position: relative;
+    display: flex;
+    margin-bottom: 18px;
+    align-items: center;
+    justify-content: center;
+}
+
+.become-a-teacher__tab-box .tab-buttons .tab-btn {
+    position: relative;
+    display: block;
+}
+
+.become-a-teacher__tab-box .tab-buttons .tab-btn+.tab-btn {
+    margin-left: 50px;
+}
+
+.become-a-teacher__tab-box .tab-buttons .tab-btn span {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--fistudy-black);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    z-index: 1;
+    text-align: center;
+    text-transform: capitalize;
+    overflow: hidden;
+}
+
+.become-a-teacher__tab-box .tab-buttons .tab-btn.active-btn span {
+    color: var(--fistudy-base);
+}
+
+.become-a-teacher__tab-box .tab-buttons .tab-btn span:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2px;
+    height: 2px;
+    content: "";
+    background-color: var(--fistudy-base);
+    background-position: top bottom;
+    transition-delay: .1s;
+    transition-timing-function: ease-in-out;
+    transition-duration: .5s;
+    transition-property: all;
+    transform-origin: top;
+    transform-style: preserve-3d;
+    transform: scaleY(0);
+    z-index: -1;
+}
+
+.become-a-teacher__tab-box .tab-buttons .tab-btn.active-btn span:before {
+    transform: scaleY(1.0);
+}
+
+.become-a-teacher__tab-box .tabs-content {
+    position: relative;
+    display: block;
+}
+
+.become-a-teacher__tab-box .tabs-content .tab {
+    position: relative;
+    display: none;
+    -webkit-transform: translateY(35px);
+    -ms-transform: translateY(35px);
+    transform: translateY(35px);
+    -webkit-transition: all 600ms ease;
+    -moz-transition: all 600ms ease;
+    -ms-transition: all 600ms ease;
+    -o-transition: all 600ms ease;
+    transition: all 600ms ease;
+    z-index: 10;
+}
+
+.become-a-teacher__tab-box .tabs-content .tab.active-tab {
+    display: block;
+    margin-top: 0px;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+
+}
+
+.become-a-teacher__content {
+    position: relative;
+    display: block;
+    max-width: 960px;
+    margin: 0 auto 0;
+    text-align: center;
+}
+
+.become-a-teacher__bottom {
+    position: relative;
+    display: block;
+    margin-top: 80px;
+}
+
+.become-a-teacher__img-box {
+    position: relative;
+    display: block;
+}
+
+.become-a-teacher__img {
+    position: relative;
+    display: block;
+}
+
+.become-a-teacher__img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.become-a-teacher__right {
+    position: relative;
+    display: block;
+    margin-left: 26px;
+}
+
+.become-a-teacher__right .section-title-two {
+    margin-bottom: 41px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

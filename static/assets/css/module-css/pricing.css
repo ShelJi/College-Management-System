@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+# Pricing One
+--------------------------------------------------------------*/
+.pricing-one {
+    position: relative;
+    display: block;
+    background: linear-gradient(256.49deg, #FFFBF5 0%, #FAEDFF 100%);
+    padding: 120px 0 84px;
+    z-index: 1;
+}
+
+.pricing-one__single {
+    position: relative;
+    display: block;
+    background-color: #FCFCFC;
+    border: 1px solid var(--fistudy-bdr-color);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.07);
+    border-radius: 16px;
+    padding: 22px 19px 25px;
+    margin-bottom: 24px;
+    text-align: center;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.pricing-one__single:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-one__package-name {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.pricing-one__package-name a {
+    color: var(--fistudy-black);
+}
+
+.pricing-one__package-name a:hover {
+    color: var(--fistudy-base);
+}
+
+.pricing-one__price-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+    background-color: var(--fistudy-base);
+    border-radius: 50%;
+    margin: 22px auto 22px;
+}
+
+.pricing-one__price-box h3 {
+    font-size: 40px;
+    color: var(--fistudy-white);
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.pricing-one__price-box p {
+    color: var(--fistudy-white);
+    margin-top: 8px;
+}
+
+.pricing-one__feature {
+    position: relative;
+    display: block;
+}
+
+.pricing-one__feature li {
+    position: relative;
+    display: block;
+    font-size: 16px;
+}
+
+.pricing-one__feature li+li {
+    margin-top: 14px;
+}
+
+.pricing-one__btn-box {
+    position: relative;
+    display: block;
+    margin-top: 22px;
+}
+
+/*--------------------------------------------------------------
+# Pricing Page
+--------------------------------------------------------------*/
+.pricing-page {
+    margin-bottom: 152px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

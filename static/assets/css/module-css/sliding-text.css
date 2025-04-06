@@ -1,0 +1,268 @@
+/*--------------------------------------------------------------
+# Sliding Text One
+--------------------------------------------------------------*/
+.sliding-text-one {
+    position: relative;
+    display: block;
+    background-color: #425BFC;
+    padding: 16px 0 16px;
+    filter: drop-shadow(0px 11px 22px rgba(0, 0, 0, 0.12));
+    z-index: 4;
+}
+
+.sliding-text-one__wrap {
+    position: relative;
+    display: block;
+}
+
+.sliding-text__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
+.sliding-text__list li {
+    osition: relative;
+    display: block;
+    float: left;
+    margin-right: 40px;
+}
+
+.sliding-text__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--fistudy-white);
+    font-size: 32px;
+    line-height: 42px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: capitalize;
+}
+
+.sliding-text__title .odometer {
+    line-height: 24px !important;
+    font-family: var(--fistudy-font) !important;
+    letter-spacing: 0.05em;
+}
+
+.sliding-text__title img {
+    margin-left: 40px;
+    position: relative;
+    width: auto;
+    animation: textRotate 10s linear 0s forwards infinite alternate;
+}
+
+@keyframes textRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Sliding Text Two
+--------------------------------------------------------------*/
+.sliding-text-two {
+    position: relative;
+    display: block;
+    margin-top: -85px;
+    padding: 0 0 120px;
+    z-index: 1;
+}
+
+.sliding-text-two__wrap {
+    position: relative;
+    display: block;
+}
+
+.sliding-text-two__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
+.sliding-text-two__list li {
+    osition: relative;
+    display: block;
+    float: left;
+    margin-right: 35px;
+}
+
+.sliding-text-two__list li img {
+    position: relative;
+    display: block;
+    width: auto;
+    top: 35px;
+    animation: textRotate 10s linear 0s forwards infinite alternate;
+}
+
+.sliding-text-two__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--fistudy-base);
+    font-size: 120px;
+    line-height: 85px;
+    font-weight: 600;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    font-family: var(--fistudy-font-two);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.sliding-text-two__list li .sliding-text-two__title:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px transparent;
+}
+
+.sliding-text-two__title:before {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: var(--fistudy-base);
+    white-space: nowrap;
+    content: attr(data-hover);
+    transition: all 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87);
+}
+
+.sliding-text-two__list li:hover .sliding-text-two__title:before {
+    width: 100%;
+    color: var(--fistudy-base);
+}
+
+
+/*--------------------------------------------------------------
+# Sliding Text Three
+--------------------------------------------------------------*/
+.sliding-text-three {
+    position: relative;
+    display: block;
+    background-color: var(--fistudy-base);
+    padding: 11px 0 11px;
+    z-index: 1;
+}
+
+.sliding-text-threee__wrap {
+    position: relative;
+    display: block;
+}
+
+.sliding-text-three__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
+.sliding-text-three__list li {
+    osition: relative;
+    display: block;
+    float: left;
+    margin-right: 60px;
+}
+
+.sliding-text-three__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--fistudy-white);
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: lowercase;
+    font-family: var(--fistudy-font-two);
+    font-style: italic;
+}
+
+.sliding-text-three__title img {
+    margin-left: 60px;
+    position: relative;
+    width: auto;
+}
+
+
+/*--------------------------------------------------------------
+# Slider Text Four
+--------------------------------------------------------------*/
+.sliding-text-four .sliding-text-three__title {
+    text-transform: capitalize;
+}
+
+/*--------------------------------------------------------------
+# Sliding Text Five
+--------------------------------------------------------------*/
+.sliding-text-five {
+    position: relative;
+    display: block;
+    margin-top: 68px;
+}
+
+.sliding-text-five__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
+.sliding-text-five__list li {
+    osition: relative;
+    display: block;
+    float: left;
+    margin-right: 50px;
+}
+
+.sliding-text-five__list li img {
+    position: relative;
+    display: block;
+    width: auto;
+    top: 28px;
+    animation: textRotate 10s linear 0s forwards infinite alternate;
+}
+
+.sliding-text-five__title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 120px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #F87A53 0%, #687EFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    opacity: 0.2;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

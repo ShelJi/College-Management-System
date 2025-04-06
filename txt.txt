@@ -1,0 +1,12 @@
+FIRST TIME SETUP
+python -m  venv .venv
+.venv/scripts/activate
+pip install -r requirements.txt
+python manage.py runserver
+
+
+
+
+python -m  venv .venv
+.venv/scripts/activate
+python manage.py runserver

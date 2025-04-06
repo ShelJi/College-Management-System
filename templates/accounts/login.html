@@ -1,0 +1,557 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+<script>
+    console.log("{{ form.errors }}")
+</script>
+
+<div class="" style="margin-top: 111px;">
+
+
+
+
+    {% comment %} <form action="" method="post">
+        {% csrf_token %}
+        <ul class="errorlist nonfield"><li>Please enter a correct username and password. Note that both fields may be case-sensitive.</li></ul>
+
+  <p>
+    <label for="id_username">Username:</label>
+    <input type="text" name="username" value="anish" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+    
+  </p>
+
+  <p>
+    <label for="id_password">Password:</label>
+    <input type="password" name="password" autocomplete="current-password" required="" id="id_password">
+    
+  </p>
+        <button type="submit">submit</button>
+    </form> {% endcomment %}
+
+
+
+
+
+
+
+
+
+<section
+	class="page-header"
+	style="
+		box-sizing: border-box;
+		position: relative;
+		display: block;
+		overflow: hidden;
+		background: linear-gradient(
+				92.7deg,
+				rgb(241, 243, 255) 0.48%,
+				rgb(244, 254, 243) 56.21%,
+				rgb(255, 243, 252) 100%
+			)
+			rgb(255, 255, 255);
+		z-index: 1;
+		color: rgb(107, 119, 139);
+		font-family: Outfit, sans-serif;
+		font-size: 18px;
+		font-style: normal;
+		font-variant-ligatures: normal;
+		font-variant-caps: normal;
+		font-weight: 400;
+		letter-spacing: normal;
+		orphans: 2;
+		text-align: start;
+		text-indent: 0px;
+		text-transform: none;
+		widows: 2;
+		word-spacing: 0px;
+		-webkit-text-stroke-width: 0px;
+		white-space: normal;
+		text-decoration-thickness: initial;
+		text-decoration-style: initial;
+		text-decoration-color: initial;
+	"
+    >
+	<div
+		class="container"
+		style="
+			box-sizing: border-box;
+			width: 1314px;
+			padding-right: 12px;
+			padding-left: 12px;
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 1314px;
+		"
+	>
+		<div
+			class="page-header__inner"
+			style="
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				padding: 160px 0px 168px;
+				z-index: 1;
+			"
+		>
+			<div
+				class="page-header__img"
+				style="
+					box-sizing: border-box;
+					position: absolute;
+					bottom: 0px;
+					right: 0px;
+					z-index: 1;
+				"
+			>
+				<br class="Apple-interchange-newline" /><img
+					src="{% static 'assets/images/resources/page-header-img-1.png' %}"
+					alt=""
+					style="
+						box-sizing: border-box;
+						vertical-align: middle;
+						width: auto;
+						animation: 3s ease-in-out 0s infinite normal none running topBottom;
+					"
+				/>
+				<div
+					class="page-header__shape-1"
+					style="
+						box-sizing: border-box;
+						position: absolute;
+						bottom: -45px;
+						right: 0px;
+						z-index: -1;
+						animation-name: rotateme;
+						animation-duration: 24s;
+						animation-iteration-count: infinite;
+						animation-timing-function: linear;
+					"
+				>
+					<img
+						src="{% static 'assets/images/shapes/page-header-shape-1.png' %}"
+						alt=""
+						style="
+							box-sizing: border-box;
+							vertical-align: middle;
+							width: auto;
+							animation: 3s ease-in-out 0s infinite normal none running topBottom;
+						"
+					/>
+				</div>
+				<div
+					class="page-header__shape-2"
+					style="
+						box-sizing: border-box;
+						position: absolute;
+						left: 50px;
+						top: -5px;
+						z-index: -1;
+					"
+				>
+					<img
+						src="{% static 'assets/images/shapes/page-header-shape-2.png' %}"
+						alt=""
+						style="
+							box-sizing: border-box;
+							vertical-align: middle;
+							width: auto;
+							animation: 3s ease-in-out 0s infinite normal none running topBottom;
+						"
+					/>
+				</div>
+				<div
+					class="page-header__shape-3"
+					style="
+						box-sizing: border-box;
+						position: absolute;
+						left: -105px;
+						bottom: 40px;
+						z-index: -1;
+					"
+				>
+					<img
+						src="{% static 'assets/images/shapes/page-header-shape-3.png' %}"
+						alt=""
+						style="
+							box-sizing: border-box;
+							vertical-align: middle;
+							width: auto;
+							animation: 3s ease-in-out 0s infinite normal none running topBottom;
+						"
+					/>
+				</div>
+			</div>
+			<h2
+				style="
+					box-sizing: border-box;
+					margin: 0px 0px 4px;
+					font-weight: 600;
+					line-height: 60px;
+					font-size: 60px;
+					font-family: var(--fistudy-font);
+					color: var(--fistudy-black);
+					text-transform: capitalize;
+				"
+			>
+				Login
+			</h2>
+			<div
+				class="thm-breadcrumb__box"
+				style="
+					box-sizing: border-box;
+					position: relative;
+					display: inline-block;
+					z-index: 1;
+				"
+			>
+				<ul
+					class="thm-breadcrumb list-unstyled"
+					style="
+						box-sizing: border-box;
+						padding-left: 0px;
+						margin-top: 0px;
+						margin-bottom: 0px;
+						list-style: none;
+						position: relative;
+						display: inline-flex;
+						align-items: center;
+						gap: 10px;
+					"
+				>
+					<li
+						style="
+							box-sizing: border-box;
+							position: relative;
+							display: inline-block;
+							font-size: 15px;
+							font-weight: 500;
+							color: var(--fistudy-gray);
+							text-transform: capitalize;
+							transition: 500ms;
+						"
+					>
+						<a
+							href="{% url "landing_page:index" %}"
+							style="
+								box-sizing: border-box;
+								color: var(--fistudy-base);
+								text-decoration: none;
+								transition: 500ms;
+								position: relative;
+								display: inline-block;
+							"
+							>Home</a
+						>
+					</li>
+					<li
+						style="
+							box-sizing: border-box;
+							position: relative;
+							display: inline-block;
+							font-size: 15px;
+							font-weight: 500;
+							color: var(--fistudy-gray);
+							text-transform: capitalize;
+							transition: 500ms;
+						"
+					>
+						<span style="box-sizing: border-box; color: var(--fistudy-base)">//</span>
+					</li>
+					<li
+						style="
+							box-sizing: border-box;
+							position: relative;
+							display: inline-block;
+							font-size: 15px;
+							font-weight: 500;
+							color: var(--fistudy-gray);
+							text-transform: capitalize;
+							transition: 500ms;
+						"
+					>
+						Login
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<section
+	class="login-one"
+	style="
+		box-sizing: border-box;
+		position: relative;
+		display: block;
+		background-color: var(--fistudy-white);
+		padding: 112px 0px 120px;
+		z-index: 1;
+		color: rgb(107, 119, 139);
+		font-family: Outfit, sans-serif;
+		font-size: 18px;
+		font-style: normal;
+		font-variant-ligatures: normal;
+		font-variant-caps: normal;
+		font-weight: 400;
+		letter-spacing: normal;
+		orphans: 2;
+		text-align: start;
+		text-indent: 0px;
+		text-transform: none;
+		widows: 2;
+		word-spacing: 0px;
+		-webkit-text-stroke-width: 0px;
+		white-space: normal;
+		text-decoration-thickness: initial;
+		text-decoration-style: initial;
+		text-decoration-color: initial;
+	"
+ > 
+	<div
+		class="container"
+		style="
+			box-sizing: border-box;
+			width: 620px;
+			padding-right: 12px;
+			padding-left: 12px;
+			margin-right: auto;
+			margin-left: auto;
+			max-width: 620px;
+		"
+	>
+		<div
+			class="login-one__form"
+			style="box-sizing: border-box; position: relative; display: block"
+		>
+			<div
+				class="inner-title text-center"
+				style="
+					box-sizing: border-box;
+					text-align: center !important;
+					position: relative;
+					display: block;
+					padding-bottom: 60px;
+				"
+			>
+				<h2
+					style="
+						box-sizing: border-box;
+						margin: 0px;
+						font-weight: 500;
+						line-height: 1em;
+						font-size: 60px;
+						font-family: var(--fistudy-font);
+						color: var(--fistudy-black);
+						text-transform: capitalize;
+					"
+				>
+					Login Here
+				</h2>
+			</div>
+			<form
+				id="login-one__form"
+				name="Login-one_form"
+				action=""
+				method="post"
+				style="
+					box-sizing: border-box;
+					position: relative;
+					display: block;
+					background-color: var(--fistudy-white);
+					box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 80px;
+					padding: 60px 50px 52px;
+				"
+			>
+				{% csrf_token %}
+				<div
+					class="row"
+					style="
+						box-sizing: border-box;
+						--bs-gutter-x: 24px;
+						--bs-gutter-y: 0;
+						display: flex;
+						flex-wrap: wrap;
+						margin-top: calc(var(--bs-gutter-y) * -1);
+						margin-right: calc(var(--bs-gutter-x) / -2);
+						margin-left: calc(var(--bs-gutter-x) / -2);
+					"
+				>
+					<div
+						class="col-xl-12"
+						style="
+							box-sizing: border-box;
+							flex: 0 0 auto;
+							width: 520px;
+							max-width: 100%;
+							padding-right: calc(var(--bs-gutter-x) / 2);
+							padding-left: calc(var(--bs-gutter-x) / 2);
+							margin-top: var(--bs-gutter-y);
+						"
+					>
+						<div
+							class="form-group"
+							style="
+								box-sizing: border-box;
+								position: relative;
+								display: block;
+								margin-bottom: 20px;
+							"
+						>
+							<div
+								class="input-box"
+								style="box-sizing: border-box; position: relative; display: block"
+							>
+								<input
+									type="text"
+									name="username"
+									placeholder="Username..."
+									required=""
+									value=""
+									style="
+										box-sizing: border-box;
+										margin: 0px;
+										font-family: var(--fistudy-font);
+										font-size: 16px;
+										line-height: inherit;
+										position: relative;
+										display: block;
+										border-radius: 10px;
+										border: 1px solid rgba(var(--fistudy-bdr-color-rgb), 0.5);
+										background-color: rgba(var(--fistudy-bdr-color-rgb), 0.5);
+										width: 496px;
+										height: 60px;
+										color: var(--fistudy-gray);
+										font-weight: 400;
+										font-style: normal;
+										padding-left: 30px;
+										padding-right: 30px;
+										outline: none;
+										transition: 500ms;
+									"
+								/>
+							</div>
+						</div>
+					</div>
+					<div
+						class="col-xl-12"
+						style="
+							box-sizing: border-box;
+							flex: 0 0 auto;
+							width: 520px;
+							max-width: 100%;
+							padding-right: calc(var(--bs-gutter-x) / 2);
+							padding-left: calc(var(--bs-gutter-x) / 2);
+							margin-top: var(--bs-gutter-y);
+						"
+					>
+						<div
+							class="form-group"
+							style="
+								box-sizing: border-box;
+								position: relative;
+								display: block;
+								margin-bottom: 20px;
+							"
+						>
+							<div
+								class="input-box"
+								style="box-sizing: border-box; position: relative; display: block"
+							>
+								<input
+									type="password"
+									name="password"
+									placeholder="Password..."
+									required=""
+									value=""
+									style="
+										box-sizing: border-box;
+										margin: 0px;
+										font-family: var(--fistudy-font);
+										font-size: 16px;
+										line-height: inherit;
+										position: relative;
+										display: block;
+										border-radius: 10px;
+										border: 1px solid rgba(var(--fistudy-bdr-color-rgb), 0.5);
+										background-color: rgba(var(--fistudy-bdr-color-rgb), 0.5);
+										width: 496px;
+										height: 60px;
+										color: var(--fistudy-gray);
+										font-weight: 400;
+										font-style: normal;
+										padding-left: 30px;
+										padding-right: 30px;
+										outline: none;
+										transition: 500ms;
+									"
+								/>
+							</div>
+						</div>
+					</div>
+					<div
+						class="col-xl-12"
+						style="
+							box-sizing: border-box;
+							flex: 0 0 auto;
+							width: 520px;
+							max-width: 100%;
+							padding-right: calc(var(--bs-gutter-x) / 2);
+							padding-left: calc(var(--bs-gutter-x) / 2);
+							margin-top: var(--bs-gutter-y);
+						"
+					>
+						<div
+							class="form-group"
+							style="
+								box-sizing: border-box;
+								position: relative;
+								display: block;
+								margin-bottom: 20px;
+							"
+						>
+							<button
+								class="thm-btn"
+								type="submit"
+								data-loading-text="Please wait..."
+								style="
+									box-sizing: border-box;
+									border-radius: 25px;
+									margin: 0px;
+									font-family: inherit;
+									font-size: 18px;
+									line-height: inherit;
+									text-transform: none;
+									appearance: none;
+									position: relative;
+									display: inline-flex;
+									align-items: center;
+									justify-content: center;
+									vertical-align: middle;
+									gap: 10px;
+									font-weight: 500;
+									color: var(--fistudy-white);
+									padding: 11px 25px 12px;
+									background-color: var(--fistudy-base);
+									z-index: 2;
+									text-align: center;
+									overflow: hidden;
+									transition: 500ms;
+									outline: none !important;
+									cursor: pointer;
+									width: 496px;
+									border: none;
+								"
+							>
+								Login Here
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+</div>
+
+<!--End Login One-->
+{% endblock body %}

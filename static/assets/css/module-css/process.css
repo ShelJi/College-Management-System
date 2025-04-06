@@ -1,0 +1,201 @@
+/*--------------------------------------------------------------
+# Process One
+--------------------------------------------------------------*/
+.process-one {
+    position: relative;
+    display: block;
+    counter-reset: count;
+    padding: 120px 0 140px;
+    background: linear-gradient(105.09deg, #F9F5F6 0%, rgba(238, 241, 255, 0.92549) 50%, #F9F5F6 100%);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.process-one .section-title-two {
+    margin-bottom: 128px;
+}
+
+.process-one__inner {
+    position: relative;
+    display: block;
+}
+
+.process-one__inner .row {
+    --bs-gutter-x: 90px;
+}
+
+.process-one__inner::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    background-color: rgba(var(--fistudy-primary-rgb), .20);
+}
+
+.process-one__inner-wrap {
+    position: relative;
+    display: block;
+}
+
+.process-one__inner-wrap::after {
+    content: "";
+    position: absolute;
+    bottom: -19px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--fistudy-primary);
+    transform: translateX(-50%);
+}
+
+.process-one__inner-wrap::before {
+    content: "";
+    position: absolute;
+    bottom: -23px;
+    left: 50%;
+    width: 23px;
+    height: 23px;
+    background-color: rgba(var(--fistudy-primary-rgb), .20);
+    transform: translateX(-50%);
+}
+
+.process-one__list-box::after {
+    content: "";
+    position: absolute;
+    top: -59px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--fistudy-primary);
+    transform: translateX(-50%);
+}
+
+.process-one__list-box::before {
+    content: "";
+    position: absolute;
+    top: -63px;
+    left: 50%;
+    width: 23px;
+    height: 23px;
+    background-color: rgba(var(--fistudy-primary-rgb), .20);
+    transform: translateX(-50%);
+}
+
+.process-one__list-box {
+    position: relative;
+    display: block;
+}
+
+.process-one__inner ul li:nth-child(1) .process-one__single,
+.process-one__inner ul li:nth-child(3) .process-one__single {
+    text-align: right;
+}
+
+.process-one__inner ul li:nth-child(2) .process-one__single,
+.process-one__inner ul li:nth-child(4) .process-one__single {
+    top: 195px;
+}
+
+.process-one__single {
+    position: relative;
+    display: block;
+    margin-bottom: 215px;
+}
+
+.process-one__single::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -57px;
+    width: 25px;
+    height: 25px;
+    background-color: var(--fistudy-primary);
+}
+
+.process-one__inner ul li:nth-child(2) .process-one__single::before,
+.process-one__inner ul li:nth-child(4) .process-one__single::before {
+    right: inherit;
+    left: -59px;
+}
+
+.process-one__single::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: rgba(var(--fistudy-white-rgb), .50);
+    top: 5px;
+    right: -52px;
+}
+
+.process-one__inner ul li:nth-child(2) .process-one__single::after,
+.process-one__inner ul li:nth-child(4) .process-one__single::after {
+    right: inherit;
+    left: -54px;
+}
+
+.process-one__count {
+    position: relative;
+    display: block;
+}
+
+.process-one__count:before {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    color: var(--fistudy-primary);
+    counter-increment: count;
+    content: "step 0"counter(count);
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    text-transform: capitalize;
+}
+
+.process-one__title {
+    font-size: 25px;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dashed rgba(var(--fistudy-primary-rgb), .40);
+    color: var(--fistudy-gray);
+    padding-bottom: 10px;
+}
+
+.process-one__text-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.process-one__icon {
+    position: relative;
+    display: inline-block;
+}
+
+.process-one__icon span {
+    position: relative;
+    display: inline-block;
+    font-size: 30px;
+    color: var(--fistudy-primary);
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

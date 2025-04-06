@@ -1,0 +1,111 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div class="container mt-5">
+		<h2 class="mb-4 text-center fw-bold">Student List</h2>
+
+		<div class="card p-4 shadow-sm">
+			<table class="table table-bordered table-striped">
+				<thead class="table-dark">
+					<tr>
+						<th>Roll No</th>
+						<th>Name</th>
+						<th>Course</th>
+						<th>Semester</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for student in students %}
+					<tr>
+						<td>{{ student.rollno }}</td>
+						<td>{{ student.user.username }}</td>
+						<td>{{ student.course }}</td>
+						<td>{{ student.semester }}</td>
+						<td>
+							<a
+								href="{% url 'staff_dashboard:view_student' student.pk %}"
+								class="btn btn-info btn-sm"
+								>View</a
+							>
+							<a
+								href="{% url 'staff_dashboard:create_attendance' student.pk %}"
+								class="btn btn-success btn-sm"
+								>Add Attendance</a
+							>
+							<a
+								href="{% url 'staff_dashboard:attendance_list' student.pk %}"
+								class="btn btn-success btn-sm"
+								>View Attendance</a
+							>
+							<a
+								href="{% url 'exam:exam_result' student.pk 1 %}"
+								class="btn btn-success btn-sm"
+								>Exam Result</a
+							>
+						</td>
+					</tr>
+					{% empty %}
+					<tr>
+						<td colspan="5" class="text-center fw-bold text-danger">
+							No students found.
+						</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+{% endblock body %} {% comment %}
+<div class="container">
+	<h2 class="my-4">Student List</h2>
+
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Roll No</th>
+				<th>Name</th>
+				<th>Course</th>
+				<th>Semester</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for student in students %}
+			<tr>
+				<td>{{ student.rollno }}</td>
+				<td>{{ student.user.username }}</td>
+				<td>{{ student.course }}</td>
+				<td>{{ student.semester }}</td>
+				<td>
+					<a
+						href="{% url 'staff_dashboard:view_student' student.pk %}"
+						class="btn btn-primary btn-sm"
+						>View</a
+					>
+					<a
+						href="{% url 'staff_dashboard:create_attendance' student.pk %}"
+						class="btn btn-primary btn-sm"
+						>add attendance</a
+					>
+				</td>
+			</tr>
+			{% empty %}
+			<tr>
+				<td colspan="5" class="text-center">No students found.</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endcomment %}

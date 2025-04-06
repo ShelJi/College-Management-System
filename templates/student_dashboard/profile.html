@@ -1,0 +1,52 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+
+<div style="margin-top: 111px; min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+    
+    <!-- Profile Card -->
+    <div class="max-w-4xl w-full p-6 bg-white shadow-lg rounded-2xl" style="padding: 100px;">
+        <h2 class="text-2xl font-semibold text-center mb-6">Profile</h2>
+
+        <div class="flex items-center space-x-6">
+            <img src="{{ student.user.profile_pic.url }}" alt="Profile Picture" 
+                 class="w-32 h-32 rounded-full shadow-md border-4 border-gray-300"  style="margin: 30px 0;">
+
+            <div class="flex-1">
+                <h4 class="text-xl font-semibold text-gray-800">{{ student.user.username }}</h4>
+                <p class="text-gray-600"><strong>Email:</strong> {{ student.user.email }}</p>
+                <p class="text-gray-600"><strong>Phone:</strong> {{ student.user.phone }}</p>
+                <p class="text-gray-600">
+                    <strong>Address:</strong> {{ student.user.address }}, {{ student.user.district }}, {{ student.user.state }}
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-6 border-t pt-4">
+            <p class="text-gray-700"><strong>Course:</strong> {{ student.course }}</p>
+            <p class="text-gray-700"><strong>Semester:</strong> {{ student.semester }}</p>
+            <p class="text-gray-700 text-lg font-semibold">
+                <strong>Balance Fee:</strong> <span class="text-red-500">₹{{ student.balance_fee }}</span>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock body %}
+
+
+{% comment %} <div class="container">
+    <h2 class="my-4">My Profile</h2>
+    
+    <div class="card p-3">
+        <img src="{{ student.user.profile_pic.url }}" alt="Profile Picture" class="img-thumbnail" width="150">
+        <h4>{{ student.user.username }}</h4>
+        <p>Email: {{ student.user.email }}</p>
+        <p>Phone: {{ student.user.phone }}</p>
+        <p>Address: {{ student.user.address }}, {{ student.user.district }}, {{ student.user.state }}</p>
+        <p>Course: {{ student.course }}</p>
+        <p>Semester: {{ student.semester }}</p>
+        <p>Balance Fee: ₹{{ student.balance_fee }}</p>
+    </div>
+</div> {% endcomment %}

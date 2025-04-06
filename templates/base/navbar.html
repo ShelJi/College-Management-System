@@ -1,0 +1,118 @@
+<header class="main-header-two">
+	<nav class="main-menu main-menu-two">
+		<div class="main-menu-two__wrapper">
+			<div class="container">
+				<div class="main-menu-two__wrapper-inner">
+					<div class="main-menu-two__left">
+						<div class="main-menu-two__logo">
+							<a href="index.html"
+								><img src="assets/images/resources/logo-2.png" alt=""
+							/></a>
+						</div>
+					</div>
+					<div class="main-menu-two__main-menu-box">
+						<a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+						<ul class="main-menu__list one-page-scroll-menu">
+							<li></li>
+							<li class="scrollToLink">
+								{% comment %} <a href="https://nicollege.com/">Home </a> {% endcomment %}
+								<a href="/#">Home </a>
+							</li>
+							<li class="scrollToLink">
+								<a href="https://nicollege.com/secretary.php">About</a>
+							</li>
+							<li class="scrollToLink">
+								<a href="/#courses">Course</a>
+							</li>
+							{% comment %} <li class="scrollToLink">
+								<a href="/gallery/">gallery</a>
+							</li> {% endcomment %}
+							{% comment %}
+							<li class="scrollToLink">
+								<a href="#team">Team</a>
+							</li>
+							<li class="scrollToLink">
+								<a href="#testimonial">Testimonial</a>
+							</li>
+							<li class="scrollToLink">
+								<a href="#blog">Blog</a>
+							</li>
+							{% endcomment %}
+							<li class="scrollToLink">
+								<a href="#contact">Contact</a>
+							</li>
+						</ul>
+					</div>
+					<div class="main-menu-two__right">
+						{% comment %}
+						<div class="main-menu-two__search-box">
+							<a
+								href="#"
+								class="main-menu-two__search searcher-toggler-box icon-search"
+							></a>
+						</div>
+						{% endcomment %}
+						<div class="main-menu-two__signin-reg">
+							<div class="main-menu-two__signin-reg-icon">
+								<span class="icon-user-plus"></span>
+							</div>
+
+							<div class="main-menu-two__signin-reg-content">
+								{% if request.user.is_authenticated %}
+
+								<form
+									action="{% url 'accounts:logout' %}"
+									method="post"
+									style="display: flex"
+								>
+									{% csrf_token %}
+									<a
+										href="
+                                            {% if request.user.is_staff %}
+                                                {% url 'staff_dashboard:dashboard' %}
+                                            {% else %}
+                                                {% url 'student_dashboard:dashboard' %}
+                                            {% endif %}
+                                        "
+										class="main-menu-two__signin"
+									>
+										<h1>{{ request.user|capfirst }}</h1>
+									</a>
+
+									<button
+										type="submit"
+										style="margin: 0 20px; border-radius: 20%"
+									>
+										logout
+									</button>
+								</form>
+
+								{% else %}
+
+								<a href="{% url 'accounts:login' %}" class="main-menu-two__signin">
+									Login
+								</a>
+
+								{% endif %}
+							</div>
+						</div>
+						{% comment %}
+						<div class="main-menu-two__support-box">
+							<p class="main-menu-two__support-text">
+								<span class="icon-contact"></span> Support
+							</p>
+							<h5 class="main-menu-two__support-number">
+								<a href="tel:1212345678900">+12 (123) 456 78900</a>
+							</h5>
+						</div>
+						{% endcomment %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+</header>
+
+<div class="stricky-header stricked-menu main-menu main-menu-two">
+	<div class="sticky-header__content"></div>
+</div>

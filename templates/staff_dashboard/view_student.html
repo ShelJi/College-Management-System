@@ -1,0 +1,152 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div class="container mx-auto px-4 py-6">
+		<h2 class="text-3xl font-bold text-center mb-6">Student Details</h2>
+
+		<div class="bg-white p-6 rounded-lg shadow-md">
+			<div class="grid md:grid-cols-2 gap-6">
+				<!-- Profile Picture -->
+				{% if student.user.profile_pic %}
+				<div class="flex justify-center">
+					<img
+						src="{{ student.user.profile_pic.url }}"
+						alt="Profile Picture"
+						class="w-40 h-40 rounded-full shadow-lg border"
+                        style="margin: 30px 0;"
+					/>
+				</div>
+				{% endif %}
+
+				<!-- User Information -->
+				<div>
+					<h3 class="text-lg font-semibold text-gray-700 mb-2">User Information</h3>
+					<p><strong>Username:</strong> {{ student.user.username }}</p>
+					<p><strong>Email:</strong> {{ student.user.email }}</p>
+					<p><strong>Phone:</strong> {{ student.user.phone }}</p>
+					<p>
+						<strong>Address:</strong> {{ student.user.address }}, {{
+						student.user.district }}, {{ student.user.state }}
+					</p>
+					<p><strong>Pincode:</strong> {{ student.user.pincode }}</p>
+				</div>
+
+				<!-- Academic Information -->
+				<div>
+					<h3 class="text-lg font-semibold text-gray-700 mb-2">Academic Information</h3>
+					<p><strong>Roll No:</strong> {{ student.rollno }}</p>
+					<p><strong>Course:</strong> {{ student.course }}</p>
+					<p><strong>Semester:</strong> {{ student.semester }}</p>
+				</div>
+
+				<!-- Fee Details -->
+				<div>
+					<h3 class="text-lg font-semibold text-gray-700 mb-2">Fee Details</h3>
+					<p><strong>Academic Fee:</strong> ₹{{ student.academic_fee }}</p>
+					<p><strong>Exam Fee:</strong> ₹{{ student.exam_fee }}</p>
+					<p><strong>Hostel Fee:</strong> ₹{{ student.hostel_fee }}</p>
+					<p><strong>Transport Fee:</strong> ₹{{ student.transport_fee }}</p>
+					<p><strong>Other Fee:</strong> ₹{{ student.other_fee }}</p>
+					<p><strong>Balance Fee:</strong> ₹{{ student.balance_fee }}</p>
+					<p class="font-semibold text-blue-600">
+						<strong>Total Fee:</strong> ₹{{ student.total_fee }}
+					</p>
+				</div>
+			</div>
+
+			<!-- Action Buttons -->
+			<div class="mt-6 flex space-x-4">
+				{% comment %}
+				<a
+					href="{% url 'staff_dashboard:edit_student' student.pk %}"
+					class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+				>
+					 Edit Student  
+				</a>
+				{% endcomment %}
+				<a
+					href="{% url 'staff_dashboard:list_students' %}"
+					class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
+				>
+					Back to List
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock body %} 
+
+
+
+
+
+{% comment %}
+<div class="container mx-auto px-4 py-6">
+	<h2 class="text-2xl font-bold mb-4">Student Details</h2>
+
+	<div class="bg-white p-6 rounded-lg shadow-md">
+		<div class="grid grid-cols-2 gap-4">
+			<div>
+				<h3 class="text-lg font-semibold">User Information</h3>
+				<p><strong>Username:</strong> {{ student.user.username }}</p>
+				<p><strong>Email:</strong> {{ student.user.email }}</p>
+				<p><strong>Phone:</strong> {{ student.user.phone }}</p>
+				<p>
+					<strong>Address:</strong> {{ student.user.address }}, {{ student.user.district
+					}}, {{ student.user.state }}
+				</p>
+				<p><strong>Pincode:</strong> {{ student.user.pincode }}</p>
+			</div>
+
+			<div>
+				<h3 class="text-lg font-semibold">Academic Information</h3>
+				<p><strong>Roll No:</strong> {{ student.rollno }}</p>
+				<p><strong>Course:</strong> {{ student.course }}</p>
+				<p><strong>Semester:</strong> {{ student.semester }}</p>
+			</div>
+
+			<div>
+				<h3 class="text-lg font-semibold">Fee Details</h3>
+				<p><strong>Academic Fee:</strong> ₹{{ student.academic_fee }}</p>
+				<p><strong>Exam Fee:</strong> ₹{{ student.exam_fee }}</p>
+				<p><strong>Hostel Fee:</strong> ₹{{ student.hostel_fee }}</p>
+				<p><strong>Transport Fee:</strong> ₹{{ student.transport_fee }}</p>
+				<p><strong>Other Fee:</strong> ₹{{ student.other_fee }}</p>
+				<p><strong>Balance Fee:</strong> ₹{{ student.balance_fee }}</p>
+				<p class="font-semibold text-blue-600">
+					<strong>Total Fee:</strong> ₹{{ student.total_fee }}
+				</p>
+			</div>
+
+			{% if student.user.profile_pic %}
+			<div class="flex justify-center">
+				<img
+					src="{{ student.user.profile_pic.url }}"
+					alt="Profile Picture"
+					class="w-40 h-40 rounded-full shadow-lg"
+				/>
+			</div>
+			{% endif %}
+		</div>
+
+		<div class="mt-6 flex space-x-4">
+			<a href=""> Edit Student </a>
+			<a
+				href="{% url 'staff_dashboard:list_students' %}"
+				class="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
+			>
+				Back to List
+			</a>
+		</div>
+	</div>
+</div>
+{% endcomment %}

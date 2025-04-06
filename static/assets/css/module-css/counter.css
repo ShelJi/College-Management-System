@@ -1,0 +1,415 @@
+/*--------------------------------------------------------------
+# Counter One
+--------------------------------------------------------------*/
+.counter-one {
+    position: relative;
+    display: block;
+    background-color: var(--fistudy-base);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.counter-one__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: calc((100% - 686px) / 2);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    border-top-left-radius: 135px;
+    border-bottom-left-radius: 135px;
+    z-index: 1;
+}
+
+.counter-one__bg::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    right: 0;
+    bottom: -12px;
+    left: -12px;
+    border: 12px solid var(--fistudy-white);
+    border-top-left-radius: 147px;
+    border-bottom-left-radius: 147px;
+    z-index: -1;
+}
+
+.counter-one__video-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+}
+
+.counter-one__video-icon {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--fistudy-base);
+    background-color: var(--fistudy-white);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.counter-one__video-icon:hover {
+    background-color: var(--fistudy-black);
+    color: var(--fistudy-white);
+}
+
+.counter-one__video-icon:before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border: 1px solid var(--fistudy-white);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.counter-one__video-link .ripple,
+.counter-one__video-icon .ripple:before,
+.counter-one__video-icon .ripple:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 69px;
+    height: 69px;
+    border-radius: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -ms-box-shadow: 0 0 0 0 rgba(var(--fistudy-white-rgb), 0.6);
+    -o-box-shadow: 0 0 0 0 rgba(var(--fistudy-white-rgb), 0.6);
+    -webkit-box-shadow: 0 0 0 0 rgba(var(--fistudy-white-rgb), 0.6);
+    box-shadow: 0 0 0 0 rgba(var(--fistudy-white-rgb), 0.6);
+    -webkit-animation: ripple 3s infinite;
+    animation: ripple 3s infinite;
+}
+
+.counter-one__video-icon .ripple:before {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+    content: "";
+    position: absolute;
+}
+
+.counter-one__video-icon .ripple:after {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+    content: "";
+    position: absolute;
+}
+
+.counter-one__video-shape-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+}
+
+.counter-one__video-shape-1 img {
+    width: auto;
+    opacity: .80;
+}
+
+.counter-one__shape-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.05;
+    width: calc((100% - -760px) / 2);
+    background-repeat: no-repeat;
+    background-position: left center;
+    animation: topBottom 3s ease-in-out infinite;
+    z-index: -1;
+}
+
+.counter-one__left {
+    position: relative;
+    display: block;
+}
+
+.counter-one__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.counter-one__list li {
+    position: relative;
+    text-align: center;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    width: 100%;
+    padding: 73px 0 80px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.counter-one__count-hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: translateY(50px);
+    transition: background-color 0.7s ease;
+    transition: all 0.7s ease;
+    z-index: -1;
+}
+
+.counter-one__list li:hover .counter-one__count-hover-img {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.counter-one__count-hover-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--fistudy-white);
+    opacity: .83;
+    z-index: -1;
+}
+
+.counter-one__count {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-one__count h3 {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+    font-family: var(--fistudy-font);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--fistudy-white);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.counter-one__list li:hover .counter-one__count h3 {
+    -webkit-text-stroke: 1px var(--fistudy-black);
+}
+
+.counter-one__count span {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 80px;
+    line-height: 80px;
+    letter-spacing: -0.02em;
+    font-family: var(--fistudy-font);
+    color: transparent;
+    -webkit-text-stroke: 1px var(--fistudy-white);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.counter-one__list li:hover .counter-one__count span {
+    -webkit-text-stroke: 1px var(--fistudy-black);
+}
+
+.counter-one__list li p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: var(--fistudy-white);
+    margin-top: 7px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.counter-one__list li:hover p {
+    color: var(--fistudy-black);
+}
+
+
+/*--------------------------------------------------------------
+# Counter Two
+--------------------------------------------------------------*/
+.counter-two {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.counter-two__wrap {
+    position: relative;
+    display: block;
+    background: linear-gradient(90deg, #6439FF 0%, #687EFF 100%);
+    padding: 28px 0 28px;
+    transform: rotate(-4deg);
+    z-index: 1;
+}
+
+.counter-two__wrap:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -10000px;
+    right: -10000px;
+    background: linear-gradient(90deg, #6439FF 0%, #687EFF 100%);
+    z-index: -1;
+}
+
+.counter-two__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    width: fit-content;
+}
+
+.counter-two__list li {
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 35px;
+}
+
+.counter-two__shpae-1 {
+    position: relative;
+    display: inline-block;
+    top: 10px;
+}
+
+.counter-two__shpae-1 img {
+    width: auto;
+    animation: textRotate 10s linear 0s forwards infinite alternate;
+}
+
+.counter-two__single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.counter-two__img-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    border: 1px solid var(--fistudy-white);
+    border-radius: 50%;
+}
+
+.counter-two__img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+}
+
+.counter-two__img img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.counter-two__content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px dashed var(--fistudy-white);
+    border-radius: 40px;
+    padding: 15px 38px 15px;
+    gap: 10px;
+    flex: 1;
+}
+
+.counter-two__count-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.counter-two__count-box p {
+    font-size: 40px;
+    color: var(--fistudy-white);
+    font-weight: 700;
+    line-height: 40px !important;
+    font-family: var(--fistudy-font) !important;
+    letter-spacing: 0.05em;
+}
+
+.counter-two__count-box span {
+    font-size: 40px;
+    color: var(--fistudy-white);
+    font-weight: 700;
+    line-height: 40px;
+}
+
+.counter-two__text {
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--fistudy-white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

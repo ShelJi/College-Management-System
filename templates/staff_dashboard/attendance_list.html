@@ -1,0 +1,53 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div class="container my-5">
+		<h2 class="text-center text-3xl font-bold mb-4">Attendance Records</h2>
+
+		{% if attendances %}
+		<div class="table-responsive">
+			<table class="table table-bordered table-striped">
+				<thead class="thead-dark">
+					<tr>
+						<th>Username</th>
+						<th>Semester</th>
+						<th>Total Days</th>
+						<th>Days Attended</th>
+						<th>Attendance %</th>
+						<th>Last Updated</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for record in attendances %}
+					<tr>
+						<td>{{ record.user.username }}</td>
+						<td>{{ record.semester }}</td>
+						<td>{{ record.total_days }}</td>
+						<td>{{ record.attended }}</td>
+						<td>
+							- {% comment %} {% if record.total_days > 0 %} {{
+							record.attended|floatformat:2 }} / {{ record.total_days }} ({{
+							record.attended|floatformat:2 }}/{{ record.total_days|floatformat:2 }} *
+							100)% {% else %} N/A {% endif %} {% endcomment %}
+						</td>
+						<td>{{ record.updated_at|date:"M d, Y H:i A" }}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+		{% else %}
+		<p class="text-center text-lg text-gray-600">No attendance records found.</p>
+		{% endif %}
+	</div>
+</div>
+
+{% endblock body %}

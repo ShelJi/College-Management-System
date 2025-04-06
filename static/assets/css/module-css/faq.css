@@ -1,0 +1,110 @@
+/*--------------------------------------------------------------
+# Faq Page
+--------------------------------------------------------------*/
+.faq-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 133px;
+    z-index: 1;
+}
+
+.faq-page__left {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.faq-page__right {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.faq-page .faq-one-accrodion .accrodion {
+    position: relative;
+    display: block;
+    background-color: rgba(var(--fistudy-bdr-color-rgb), .30);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    padding: 19px 30px 16px;
+    transition: all 200ms linear;
+    transition-delay: 0.1s;
+    padding-right: 25px;
+    text-align: left;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title h4 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    color: var(--fistudy-black);
+    position: relative;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.faq-page .faq-one-accrodion .accrodion.active .accrodion-title h4 {
+    color: var(--fistudy-white);
+}
+
+.faq-page .faq-one-accrodion .accrodion+.accrodion {
+    margin-top: 20px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title h4::before {
+    content: "\e928";
+    font-family: 'icomoon' !important;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--fistudy-base);
+    position: absolute;
+    top: 50%;
+    right: 0;
+    line-height: 13px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    text-align: center;
+}
+
+.faq-page .faq-one-accrodion .accrodion.active .accrodion-title h4::before {
+    content: "\e926";
+    color: var(--fistudy-white);
+}
+
+.faq-page .faq-one-accrodion .accrodion-content {
+    position: relative;
+    padding-bottom: 32px;
+    padding-left: 30px;
+    padding-right: 50px;
+    margin-top: -6px;
+}
+
+.faq-page .faq-one-accrodion .accrodion-content p {
+    margin: 0;
+}
+
+.faq-page .faq-one-accrodion .accrodion-title::before {
+    display: none;
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

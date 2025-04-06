@@ -1,0 +1,71 @@
+{% extends 'base/base.html' %} 
+{% block body %}
+
+<div
+    style="
+        margin-top: 111px;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    "
+>
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center fw-bold">Create Exam Result</h2>
+
+        <div class="card p-4 shadow-sm">
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>Please fix the errors below:</strong>
+                    <ul>
+                        {% for field, errors in form.errors.items %}
+                            {% for error in errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                <div class="mb-3">
+                    <label for="id_exam" class="form-label">Exam</label>
+                    <select name="exam" id="id_exam" class="form-select" required>
+                        <option value="" selected>---------</option>
+                        {% for exam in form.exam.field.queryset %}
+                            <option value="{{ exam.pk }}">{{ exam }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="id_user" class="form-label">Student</label>
+                    <select name="user" id="id_user" class="form-select" required>
+                        <option value="" selected>---------</option>
+                        {% for student in form.user.field.queryset %}
+                            <option value="{{ student.pk }}">{{ student.username }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                {% for field in form %}
+                    {% if 'mark_subject' in field.name %}
+                        <div class="mb-3">
+                            <label for="{{ field.id_for_label }}" class="form-label">
+                                {{ field.label }}
+                            </label>
+                            {{ field }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

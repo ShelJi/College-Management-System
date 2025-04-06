@@ -1,0 +1,28 @@
+{% extends "base/base.html" %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div class="container my-5">
+		<h2 class="text-center mb-4">All Reviews</h2>
+		{% if reviews %}
+		<ul class="list-group">
+			{% for review in reviews %}
+			<li class="list-group-item">
+				<strong>{{ review.user.username }}</strong> - {{ review.created_at|date:"M d, Y H:iA" }}
+				<p class="mb-0">{{ review.review }}</p>
+			</li>
+			{% endfor %}
+		</ul>
+		{% else %}
+		<p class="text-center text-muted">No reviews found.</p>
+		{% endif %}
+	</div>
+</div>
+{% endblock %}

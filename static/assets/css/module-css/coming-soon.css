@@ -1,0 +1,169 @@
+/*--------------------------------------------------------------
+# Coming Soon Page
+--------------------------------------------------------------*/
+.coming-soon-page {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-top: 30px dashed rgba(var(--fistudy-black-rgb), .70);
+    border-bottom: 30px dashed rgba(var(--fistudy-black-rgb), .70);
+    border-left: 50px solid rgba(var(--fistudy-base-rgb), .10);
+    border-right: 50px solid rgba(var(--fistudy-base-rgb), .10);
+    z-index: 10;
+}
+
+.coming-soon-page__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: var(--fistudy-black);
+    background-blend-mode: luminosity;
+    z-index: -1;
+}
+
+.coming-soon-page__bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(0deg, #000000 5%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.coming-soon-page__content {
+    position: relative;
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.coming-soon-page__content .inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.coming-soon-page__content .big-title {
+    position: relative;
+    display: inline-block;
+    color: var(--fistudy-white);
+    font-size: 100px;
+    font-weight: 600;
+    text-transform: capitalize;
+    word-spacing: 15px;
+}
+
+.coming-soon-page .timer-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 57px 0 42px;
+    z-index: 2;
+}
+
+.coming-soon-page .timer-box .countdown-timer li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 170px;
+    height: 170px;
+    margin: 0px 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+.coming-soon-page .timer-box .countdown-timer li span.days,
+.coming-soon-page .timer-box .countdown-timer li span.hours,
+.coming-soon-page .timer-box .countdown-timer li span.minutes,
+.coming-soon-page .timer-box .countdown-timer li span.seconds {
+    color: #ffffff;
+    font-size: 55px;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: var(--fistudy-font);
+}
+
+.coming-soon-page .timer-box .countdown-timer li span.timeRef {
+    position: relative;
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 11px;
+    font-family: var(--fistudy-font);
+}
+
+.coming-soon-page__content .inner .text {
+    position: relative;
+    display: block;
+    padding-bottom: 60px;
+}
+
+.coming-soon-page__content .inner .text p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.coming-soon-page__subscribe-box {
+    position: relative;
+    display: block;
+    max-width: 770px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.coming-soon-page__subscribe-box form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.coming-soon-page__subscribe-box form input[type="email"] {
+    position: relative;
+    display: block;
+    max-width: 490px;
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    background: var(--fistudy-black);
+    border: none;
+    color: var(--fistudy-white);
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: all 500ms ease 0s;
+    font-family: var(--fistudy-font);
+    outline: none;
+}
+
+.coming-soon-page__subscribe-box form .coming-soon-page__btn {
+    border: none;
+    padding: 16px 25px 17px;
+    border-radius: 30px;
+}

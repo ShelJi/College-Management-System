@@ -1,0 +1,91 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center fw-bold">Mark Attendance</h2>
+
+    <div class="card p-4 shadow-sm">
+        <form method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+
+            {% if form.errors %}
+            <div class="alert alert-danger">
+                <strong>Please fix the errors below:</strong>
+                <ul>
+                    {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <div class="mb-3">
+                <label for="id_semester" class="form-label">Semester</label>
+                <select name="semester" id="id_semester" class="form-select" required>
+                    <option value="" selected>---------</option>
+                    <option value="1">First</option>
+                    <option value="2">Second</option>
+                    <option value="3">Third</option>
+                    <option value="4">Fourth</option>
+                    <option value="5">Fifth</option>
+                    <option value="6">Sixth</option>
+                    <option value="7">Seventh</option>
+                    <option value="8">Eighth</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="id_total_days" class="form-label">Total Days</label>
+                <input type="number" name="total_days" id="id_total_days" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="id_attended" class="form-label">Attended</label>
+                <input type="number" name="attended" id="id_attended" class="form-control" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock body %}
+
+
+{% comment %} <div class="container">
+    <h2 class="mb-4">Mark Attendance</h2>
+
+    <form method="post">
+        {% csrf_token %} {% endcomment %}
+{% comment %}         
+        <div class="mb-3">
+            <label for="id_student" class="form-label">Student</label>
+            {{ form.student }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_date" class="form-label">Date</label>
+            {{ form.date }}
+        </div>
+
+        <div class="mb-3">
+            <label for="id_status" class="form-label">Status</label>
+            {{ form.status }}
+        </div> {% endcomment %}
+
+        {% comment %} {{ form.as_p }} {% endcomment %}
+
+        {% comment %} <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
+    {% comment %} </form>
+</div> {% endcomment %}

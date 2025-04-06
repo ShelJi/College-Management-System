@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+<div class="container mt-5 text-center">
+	<h2 class="fw-bold">Thank You!</h2>
+	<p class="lead">Your feedback has been submitted successfully.</p>
+	<a href="{% url 'student_dashboard:dashboard' %}" class="btn btn-secondary mt-3">Back to home</a>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base/base.html' %} {% block body %}
+
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div class="container mx-auto my-10 p-6 max-w-4xl bg-white shadow-lg rounded-lg">
+		<h2 class="text-2xl font-semibold text-center mb-6">My Attendance Records</h2>
+
+		{% if attendance_records %}
+		<table class="w-full border-collapse border border-gray-300 shadow-md" style="margin: 30px; ">
+			<thead>
+				<tr class="bg-gray-200">
+					<th class="border border-gray-300 p-3 text-left">Semester</th>
+					<th class="border border-gray-300 p-3 text-left">Total Days</th>
+					<th class="border border-gray-300 p-3 text-left">Attended</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for record in attendance_records %}
+				<tr class="border border-gray-300">
+					<td class="p-3">{{ record.semester }}</td>
+					<td class="p-3">{{ record.total_days }}</td>
+					<td class="p-3 text-green-600 font-semibold">{{ record.attended }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% else %}
+		<p class="text-center text-gray-500 text-lg mt-6">No attendance records found.</p>
+		{% endif %}
+	</div>
+</div>
+
+{% endblock body %} 
+{% comment %}<h2>My Attendance Records</h2>
+
+<table>
+	{% if attendance_records %} {% for record in attendance_records %}
+	<h1>###############</h1>
+	<h3>semester: {{ record.semester }}</h3>
+	<h3>total_days: {{ record.total_days }}</h3>
+	<h3>attended: {{ record.attended }}</h3>
+	<h1>###############</h1>
+	{% empty %}
+	<h3 colspan="2">No attendance records found.</h3>
+	{% endfor %} {% endif %}
+</table>{% endcomment %}

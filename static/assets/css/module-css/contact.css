@@ -1,0 +1,333 @@
+/*--------------------------------------------------------------
+# Contact Info One
+--------------------------------------------------------------*/
+.contact-info-one {
+    position: relative;
+    display: block;
+    background-color: var(--fistudy-primary);
+    padding: 42px 0 42px;
+    z-index: 1;
+}
+
+.contact-info-one__list {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-info-one__list li {
+    position: relative;
+    display: block;
+}
+
+.contact-info-one__list li:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    bottom: -2px;
+    left: -100px;
+    width: 4px;
+    background-color: var(--fistudy-white);
+}
+
+.contact-info-one__list li:first-child:before {
+    display: none;
+}
+
+.contact-info-one__single {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-info-one__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    width: 44px;
+    background-color: var(--fistudy-white);
+    border-radius: 8px;
+    border: 1px solid var(--fistudy-bdr-color);
+    font-size: 20px;
+    color: var(--fistudy-primary);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.contact-info-one__list li:hover .contact-info-one__icon {
+    border: 1px solid var(--fistudy-black);
+    color: var(--fistudy-white);
+}
+
+.contact-info-one__icon:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    background-color: var(--fistudy-black);
+    border-radius: 6px;
+    transform: scale(0.0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
+    z-index: -1;
+}
+
+.contact-info-one__list li:hover .contact-info-one__icon:before {
+    transform: scaleX(1.0);
+}
+
+.contact-info-one__content {
+    position: relative;
+    display: block;
+    flex: 1;
+}
+
+.contact-info-one__sub-title {
+    font-size: 14px;
+    color: var(--fistudy-white);
+    line-height: 14px;
+    margin-bottom: 4px;
+}
+
+.contact-info-one__email {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--fistudy-white);
+}
+
+.contact-info-one__email a {
+    color: var(--fistudy-white);
+}
+
+.contact-info-one__email a:hover {
+    color: var(--fistudy-black);
+}
+
+
+/*--------------------------------------------------------------
+# Contact Two
+--------------------------------------------------------------*/
+.contact-two {
+    position: relative;
+    display: block;
+    padding: 120px 0 0;
+    z-index: 1;
+}
+
+.contact-two__single {
+    position: relative;
+    display: block;
+    background: linear-gradient(270deg, #FCFCFC 0%, #F4F4FF 100%);
+    border-radius: 24px;
+    padding: 24px 24px 24px;
+    margin-bottom: 24px;
+}
+
+.contact-two ul li:nth-child(2) .contact-two__single {
+    background: linear-gradient(270deg, #FCFCFC 0%, #FFEBFF 100%);
+}
+
+.contact-two ul li:nth-child(3) .contact-two__single {
+    background: linear-gradient(270deg, #FCFCFC 0%, #FFFDF4 100%);
+}
+
+.contact-two ul li:nth-child(4) .contact-two__single {
+    background: linear-gradient(270deg, #FCFCFC 0%, #F0FFEB 100%);
+}
+
+.contact-two__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(180deg, rgba(94, 94, 239, 0.24) 0%, rgba(94, 94, 239, 0) 100%);
+    border-radius: 35px;
+}
+
+.contact-two__icon::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid var(--fistudy-white);
+    border-radius: 50%;
+}
+
+.contact-two__icon img {
+    width: auto;
+    transition: all 500ms linear;
+    transition-delay: 0.1s;
+    transform: scale(1);
+}
+
+.contact-two__single:hover .contact-two__icon img {
+    transform: scale(0.9);
+}
+
+.contact-two__title {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    border-bottom: 1px solid var(--fistudy-bdr-color);
+    margin-top: 21px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-two__title a {
+    color: var(--fistudy-black);
+}
+
+.contact-two__single p {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--fistudy-black);
+}
+
+.contact-two__single p a {
+    color: var(--fistudy-black);
+}
+
+.contact-two__single p a:hover {
+    color: var(--fistudy-base);
+}
+
+/*--------------------------------------------------------------
+# Contact Three
+--------------------------------------------------------------*/
+.contact-three {
+    position: relative;
+    display: block;
+    padding: 96px 0 120px;
+    z-index: 1;
+}
+
+.contact-three__left {
+    position: relative;
+    display: block;
+    margin-right: 53px;
+    margin-top: 56px;
+}
+
+.contact-three__img {
+    position: relative;
+    display: block;
+}
+
+.contact-three__img img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.contact-three__right {
+    position: relative;
+    display: block;
+}
+
+.contact-three__right .section-title-two {
+    margin-bottom: 41px;
+}
+
+.contact-three__form {
+    position: relative;
+    display: block;
+}
+
+.contact-three__input-box {
+    position: relative;
+    display: block;
+    margin-bottom: 32px;
+}
+
+.contact-three__input-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.contact-three__input-box input[type="text"],
+.contact-three__input-box input[type="email"] {
+    height: 60px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--fistudy-bdr-color);
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    font-size: 16px;
+    color: var(--fistudy-gray);
+    display: block;
+    font-weight: 400;
+    border-radius: 8px;
+    line-height: 52px;
+}
+
+.contact-three__input-box textarea {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid var(--fistudy-bdr-color);
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    outline: none;
+    font-size: 16px;
+    color: var(--fistudy-gray);
+    display: block;
+    font-weight: 400;
+    border-radius: 8px;
+    margin-bottom: 0;
+}
+
+.contact-three__input-box.text-message-box {
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.contact-three__btn-box {
+    position: relative;
+    display: block;
+}
+
+.contact-three__btn-box .thm-btn-two {
+    border: none;
+    background-color: transparent;
+}
+
+.contact-three__btn-box .thm-btn-two span {
+    background-color: var(--fistudy-base);
+}
+
+.contact-three__btn-box .thm-btn-two>i {
+    background-color: var(--fistudy-base);
+}
+
+.contact-three__btn-box .thm-btn-two span::before,
+.contact-three__btn-box .thm-btn-two i::after {
+    background-color: var(--fistudy-primary);
+}
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

@@ -1,0 +1,326 @@
+/*--------------------------------------------------------------
+# Newsletter One
+--------------------------------------------------------------*/
+.newsletter-one {
+    position: relative;
+    display: block;
+    padding: 0 0 120px;
+    z-index: 1;
+}
+
+.newsletter-one__inner {
+    position: relative;
+    display: block;
+    background: linear-gradient(90deg, #FF4330 0%, #FF7163 100%);
+    border-radius: 40px;
+    text-align: center;
+    padding: 40px 40px 60px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.newsletter-one__bg-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.newsletter-one__shape-1 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.newsletter-one__shape-1 img {
+    width: auto;
+    opacity: .19;
+}
+
+.newsletter-one__shape-2 {
+    position: absolute;
+    right: 50px;
+    bottom: 55px;
+    z-index: -1;
+}
+
+.newsletter-one__shape-2 img {
+    width: auto;
+}
+
+.newsletter-one__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: leftRight 4s ease-in-out infinite;
+    z-index: -1;
+}
+
+.newsletter-one__img img {
+    width: auto;
+}
+
+.newsletter-one__title {
+    font-size: 80px;
+    font-weight: 600;
+    line-height: 80px;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--fistudy-white);
+}
+
+.newsletter-one__text {
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--fistudy-white);
+    text-transform: math-auto;
+    margin-top: 18px;
+    margin-bottom: 52px;
+}
+
+.newsletter-one__contact-form {
+    position: relative;
+    display: block;
+    max-width: 630px;
+    width: 100%;
+    margin: 0 auto 0;
+}
+
+.newsletter-one__contact-input-box {
+    position: relative;
+    display: block;
+}
+
+.newsletter-one__contact-input-box input[type="email"] {
+    height: 75px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--fistudy-gray);
+    padding-right: 180px;
+    padding-left: 25px;
+    background-color: var(--fistudy-white);
+    border: 3px solid var(--fistudy-bdr-color);
+    border-radius: 40px;
+}
+
+.newsletter-one__contact-form .thm-btn {
+    border: none;
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    bottom: 11px;
+}
+
+/*--------------------------------------------------------------
+# Newsletter Two
+--------------------------------------------------------------*/
+.newsletter-two {
+    position: relative;
+    display: block;
+    padding: 0 0 120px;
+    z-index: 1;
+}
+
+.newsletter-two__inner {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+.newsletter-two__img {
+    position: absolute;
+    top: -54px;
+    right: 90px;
+    animation: leftRight 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+.newsletter-two__img img {
+    width: auto;
+}
+
+.newsletter-two__inner-content {
+    position: relative;
+    display: block;
+    background: linear-gradient(90deg, #5A72FF 0%, #687EFF 100%);
+    border: 7px solid #D1E3FB;
+    border-radius: 40px 40px 100px 40px;
+    padding: 75px 60px 60px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.newsletter-two__shape-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.newsletter-two__like {
+    position: absolute;
+    bottom: 35px;
+    left: 685px;
+    animation: topBottom 3s ease-in-out infinite;
+}
+
+.newsletter-two__like img {
+    width: auto;
+}
+
+.newsletter-two__title-box {
+    position: relative;
+    display: block;
+    margin-bottom: 67px;
+}
+
+.newsletter-two__title {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--fistudy-white);
+    line-height: 53px;
+    margin-bottom: 17px;
+}
+
+.newsletter-two__title span {
+    font-family: var(--fistudy-font-two);
+    font-style: italic;
+}
+
+.newsletter-two__text {
+    font-size: 20px;
+    color: var(--fistudy-white);
+    line-height: 30px;
+}
+
+.newsletter-two__form-box {
+    position: relative;
+    display: block;
+    max-width: 545px;
+    width: 100%;
+}
+
+.newsletter-two__form {
+    position: relative;
+    display: block;
+}
+
+.newsletter-two__input {
+    position: relative;
+    display: block;
+}
+
+.newsletter-two__input input[type="email"] {
+    font-size: 18px;
+    color: var(--fistudy-gray);
+    font-weight: 400;
+    height: 75px;
+    width: 100%;
+    background: var(--fistudy-white);
+    border: 3px solid var(--fistudy-bdr-color);
+    border-radius: 40px;
+    outline: none;
+    padding: 0 40px 0;
+    padding-right: 172px;
+}
+
+.newsletter-two__btn {
+    position: absolute;
+    top: 10px;
+    right: 8px;
+    border: none;
+    background-color: var(--fistudy-primary);
+    font-size: 18px;
+    color: var(--fistudy-white);
+    font-weight: 500;
+    padding: 14px 25px 14px;
+    border-radius: 37px;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    height: 55px;
+    overflow: hidden;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.newsletter-two__btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--fistudy-base);
+    background-position: left center;
+    transition-timing-function: ease-in-out;
+    transition-property: all;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transform: scaleX(0);
+    transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 0.8s;
+    z-index: -1;
+}
+
+.newsletter-two__btn:hover::after {
+    transform: scaleX(1.0);
+    transition: all cubic-bezier(0, 0.96, 0.58, 1.1) 2s;
+}
+
+.newsletter-two__btn:before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 6px;
+    height: 30px;
+    width: 122px;
+    background-color: rgba(var(--fistudy-white-rgb), .10);
+    transform: rotate(35deg);
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 1;
+}
+
+.newsletter-two__btn span {
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    top: 1px;
+    padding-right: 2px;
+}
+
+/*--------------------------------------------------------------
+# Newsletter Three
+--------------------------------------------------------------*/
+.newsletter-three {
+    padding-top: 185px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

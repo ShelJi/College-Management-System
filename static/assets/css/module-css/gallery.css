@@ -1,0 +1,119 @@
+/*--------------------------------------------------------------
+# Gallery Page
+--------------------------------------------------------------*/
+.gallery-page {
+    position: relative;
+    display: block;
+    padding: 120px 0 143px;
+}
+
+.gallery-page .row {
+    --bs-gutter-x: 10px;
+}
+
+.gallery-page .container {
+    max-width: 1572px;
+}
+
+.gallery-page__single {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gallery-page__img {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.gallery-page__img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    background-color: var(--fistudy-black);
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-transform: scaleY(0) translateZ(100px);
+    transform: scaleY(0) translateZ(100px);
+    -webkit-transition: opacity 500ms ease, visibility 500ms ease, -webkit-transform 700ms ease;
+    transition: opacity 500ms ease, visibility 500ms ease, -webkit-transform 700ms ease;
+    transition: opacity 500ms ease, visibility 500ms ease, transform 700ms ease;
+    transition: opacity 500ms ease, visibility 500ms ease, transform 700ms ease, -webkit-transform 700ms ease;
+    z-index: 2;
+}
+
+.gallery-page__single:hover .gallery-page__img:before {
+    opacity: .90;
+    visibility: visible;
+    -webkit-transform: scaleY(1) translateZ(0px);
+    transform: scaleY(1) translateZ(0px);
+}
+
+.gallery-page__img-box {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.gallery-page__img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gallery-page__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.gallery-page__icon a {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: var(--fistudy-white);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    z-index: 2;
+}
+
+
+.gallery-page__single:hover .gallery-page__icon a {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    transition-delay: 500ms;
+    opacity: 1;
+}
+
+.gallery-page__icon a:hover {
+    color: var(--fistudy-base);
+}

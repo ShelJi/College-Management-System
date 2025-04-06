@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %} {% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div class="container mt-5">
+		<h2 class="text-center fw-bold">Survey Responses</h2>
+		<div class="card p-4 shadow-sm">
+			{% if surveys %}
+			<ul class="list-group">
+				{% for survey in surveys %}
+				<li class="list-group-item">
+					<strong>User:</strong> {{ survey.user.username }}
+					<br />
+					<strong>Submitted on:</strong> {{ survey.submitted_at }}
+					<br />
+					<strong>Overall Teaching Quality:</strong> {{ survey.get_overall_quality_display }}
+					<br />
+					<strong>
+                        <a href="{% url 'review:survey_detail' survey.id %}">View</a>
+                    </strong>
+				</li>
+				{% endfor %}
+			</ul>
+			{% else %}
+			<p class="text-muted">No surveys submitted yet.</p>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}

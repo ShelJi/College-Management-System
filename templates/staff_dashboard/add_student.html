@@ -1,0 +1,444 @@
+{% extends 'base/base.html' %} {% block body %}
+
+<div style="margin-top: 111px; margin-bottom: 111px">
+	<div class="container mx-auto px-4 py-6">
+		<h2 class="text-2xl font-bold mb-4">Add Student</h2>
+
+		<form
+			method="post"
+			enctype="multipart/form-data"
+			class="space-y-4 bg-white p-6 rounded-lg shadow-md"
+		>
+			{% csrf_token %}
+
+			<div class="grid grid-cols-2 gap-4">
+				{% comment %} {% for field in form %} {% endcomment %}
+				<div>
+					{% comment %}
+					<label class="block text-sm font-medium text-gray-700">{{ field.label }}</label>
+					{{ field }} {% endcomment %}
+
+					<div class="grid grid-cols-2 gap-4">
+						<div>
+							<h4 class="contact-three__input-title">Username</h4>
+							<div class="contact-three__input-box">
+								<input
+									type="text"
+									name="username"
+									maxlength="150"
+									autofocus=""
+									required=""
+									aria-describedby="id_username_helptext"
+									id="id_username"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">Email</h4>
+							<div class="contact-three__input-box">
+								<input
+									type="email"
+									name="email"
+									maxlength="254"
+									required=""
+									id="id_email"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">Phone</h4>
+							<div class="contact-three__input-box">
+								<input
+									type="text"
+									name="phone"
+									maxlength="15"
+									required=""
+									id="id_phone"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">Address</h4>
+							<div class="contact-three__input-box">
+								<input
+									type="text"
+									name="address"
+									maxlength="100"
+									required=""
+									id="id_address"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">District</h4>
+							<div class="contact-three__input-box">
+								<select
+									name="district"
+									required=""
+									id="id_district"
+									style="display: none"
+								>
+									<option value="" selected="">---------</option>
+									<option value="AR">Ariyalur</option>
+									<option value="CH">Chennai</option>
+									<option value="CO">Coimbatore</option>
+									<option value="CU">Cuddalore</option>
+									<option value="DH">Dharmapuri</option>
+									<option value="DI">Dindigul</option>
+									<option value="EK">Erode</option>
+									<option value="KA">Kallakurichi</option>
+									<option value="KA2">Kancheepuram</option>
+									<option value="KA3">Kanniyakumari</option>
+									<option value="KA4">Karur</option>
+									<option value="KR">Krishnagiri</option>
+									<option value="MA">Madurai</option>
+									<option value="NA">Nagapattinam</option>
+									<option value="NI">Nilgiris</option>
+									<option value="PE">Perambalur</option>
+									<option value="PU">Pudukkottai</option>
+									<option value="RA">Ramanathapuram</option>
+									<option value="SA">Salem</option>
+									<option value="SI">Sivaganga</option>
+									<option value="TE">Tenkasi</option>
+									<option value="TH">Thanjavur</option>
+									<option value="TH2">Theni</option>
+									<option value="TH3">Thoothukudi</option>
+									<option value="TI">Tiruchirappalli</option>
+									<option value="TI2">Tirunelveli</option>
+									<option value="TI3">Tirupathur</option>
+									<option value="TI4">Tiruppur</option>
+									<option value="TI5">Tiruvallur</option>
+									<option value="TI6">Tiruvannamalai</option>
+									<option value="TV">Tiruvarur</option>
+									<option value="VE">Vellore</option>
+									<option value="VI">Viluppuram</option>
+									<option value="VI2">Virudhunagar</option>
+									<option value="AL">Alappuzha</option>
+									<option value="ER">Ernakulam</option>
+									<option value="ID">Idukki</option>
+									<option value="KA">Kannur</option>
+									<option value="KA2">Kasaragod</option>
+									<option value="KO">Kollam</option>
+									<option value="KO2">Kottayam</option>
+									<option value="KO3">Kozhikode</option>
+									<option value="MA">Malappuram</option>
+									<option value="PA">Palakkad</option>
+									<option value="PA2">Pathanamthitta</option>
+									<option value="TH">Thiruvananthapuram</option>
+									<option value="TH2">Thrissur</option>
+									<option value="WA">Wayanad</option>
+								</select>
+								<div class="nice-select" tabindex="0">
+									<span class="current">---------</span>
+									<ul class="list">
+										<li data-value="" class="option selected">---------</li>
+										<li data-value="AR" class="option">Ariyalur</li>
+										<li data-value="CH" class="option">Chennai</li>
+										<li data-value="CO" class="option">Coimbatore</li>
+										<li data-value="CU" class="option">Cuddalore</li>
+										<li data-value="DH" class="option">Dharmapuri</li>
+										<li data-value="DI" class="option">Dindigul</li>
+										<li data-value="EK" class="option">Erode</li>
+										<li data-value="KA" class="option">Kallakurichi</li>
+										<li data-value="KA2" class="option">Kancheepuram</li>
+										<li data-value="KA3" class="option">Kanniyakumari</li>
+										<li data-value="KA4" class="option">Karur</li>
+										<li data-value="KR" class="option">Krishnagiri</li>
+										<li data-value="MA" class="option">Madurai</li>
+										<li data-value="NA" class="option">Nagapattinam</li>
+										<li data-value="NI" class="option">Nilgiris</li>
+										<li data-value="PE" class="option">Perambalur</li>
+										<li data-value="PU" class="option">Pudukkottai</li>
+										<li data-value="RA" class="option">Ramanathapuram</li>
+										<li data-value="SA" class="option">Salem</li>
+										<li data-value="SI" class="option">Sivaganga</li>
+										<li data-value="TE" class="option">Tenkasi</li>
+										<li data-value="TH" class="option">Thanjavur</li>
+										<li data-value="TH2" class="option">Theni</li>
+										<li data-value="TH3" class="option">Thoothukudi</li>
+										<li data-value="TI" class="option">Tiruchirappalli</li>
+										<li data-value="TI2" class="option">Tirunelveli</li>
+										<li data-value="TI3" class="option">Tirupathur</li>
+										<li data-value="TI4" class="option">Tiruppur</li>
+										<li data-value="TI5" class="option">Tiruvallur</li>
+										<li data-value="TI6" class="option">Tiruvannamalai</li>
+										<li data-value="TV" class="option">Tiruvarur</li>
+										<li data-value="VE" class="option">Vellore</li>
+										<li data-value="VI" class="option">Viluppuram</li>
+										<li data-value="VI2" class="option">Virudhunagar</li>
+										<li data-value="AL" class="option">Alappuzha</li>
+										<li data-value="ER" class="option">Ernakulam</li>
+										<li data-value="ID" class="option">Idukki</li>
+										<li data-value="KA" class="option">Kannur</li>
+										<li data-value="KA2" class="option">Kasaragod</li>
+										<li data-value="KO" class="option">Kollam</li>
+										<li data-value="KO2" class="option">Kottayam</li>
+										<li data-value="KO3" class="option">Kozhikode</li>
+										<li data-value="MA" class="option">Malappuram</li>
+										<li data-value="PA" class="option">Palakkad</li>
+										<li data-value="PA2" class="option">Pathanamthitta</li>
+										<li data-value="TH" class="option">Thiruvananthapuram</li>
+										<li data-value="TH2" class="option">Thrissur</li>
+										<li data-value="WA" class="option">Wayanad</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">State</h4>
+							<div class="contact-three__input-box">
+								<select
+									name="state"
+									required=""
+									id="id_state"
+									style="display: none"
+								>
+									<option value="" selected="">---------</option>
+									<option value="TN">Tamil Nadu</option>
+									<option value="KL">Kerala</option>
+								</select>
+								<div class="nice-select" tabindex="0">
+									<span class="current">---------</span>
+									<ul class="list">
+										<li data-value="" class="option selected">---------</li>
+										<li data-value="TN" class="option">Tamil Nadu</li>
+										<li data-value="KL" class="option">Kerala</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">Pincode</h4>
+							<div class="contact-three__input-box">
+								<input type="text" name="pincode" maxlength="6" id="id_pincode" />
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">Profile pic</h4>
+							<div class="contact-three__input-box">
+								<input
+									type="file"
+									name="profile_pic"
+									accept="image/*"
+									id="id_profile_pic"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">Password</h4>
+							<div class="contact-three__input-box">
+								<input
+									type="password"
+									name="password1"
+									autocomplete="new-password"
+									required=""
+									aria-describedby="id_password1_helptext"
+									id="id_password1"
+								/>
+							</div>
+						</div>
+
+						<div>
+							<h4 class="contact-three__input-title">Password confirmation</h4>
+							<div class="contact-three__input-box">
+								<input
+									type="password"
+									name="password2"
+									autocomplete="new-password"
+									required=""
+									aria-describedby="id_password2_helptext"
+									id="id_password2"
+								/>
+							</div>
+						</div>
+					</div>
+
+					{% if form.errors %}
+					<p class="text-red-500 text-xs mt-1">{{ field.errors.0 }}</p>
+					{% endif %}
+				</div>
+				{% comment %} {% endfor %} {% endcomment %}
+			</div>
+
+			<h3 class="text-lg font-semibold mt-6">Student Details</h3>
+			<div class="grid grid-cols-2 gap-4">
+				{% comment %}
+				<div class="contact-three__input-box">
+					<label class="block text-sm font-medium text-gray-700">Course</label>
+					<input type="text" name="course" class="w-full px-3 py-2 border rounded-lg" />
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-700">Semester</label>
+					<input type="text" name="semester" class="w-full px-3 py-2 border rounded-lg" />
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-700">Academic Fee</label>
+					<input
+						type="number"
+						name="academic_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-700">Exam Fee</label>
+					<input
+						type="number"
+						name="exam_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-700">Hostel Fee</label>
+					<input
+						type="number"
+						name="hostel_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-700">Transport Fee</label>
+					<input
+						type="number"
+						name="transport_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-700">Other Fee</label>
+					<input
+						type="number"
+						name="other_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+				<div>
+					<label class="block text-sm font-medium text-gray-700">Balance Fee</label>
+					<input
+						type="number"
+						name="balance_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+			</div>
+			{% endcomment %}
+
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Course</h4>
+				<div class="contact-three__input-box">
+					<input type="text" name="course" class="w-full px-3 py-2 border rounded-lg" />
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Semester</h4>
+				<div class="contact-three__input-box">
+					<input type="text" name="semester" class="w-full px-3 py-2 border rounded-lg" />
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Academic Fee</h4>
+				<div class="contact-three__input-box">
+					<input
+						type="number"
+						name="academic_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Exam Fee</h4>
+				<div class="contact-three__input-box">
+					<input
+						type="number"
+						name="exam_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Hostel Fee</h4>
+				<div class="contact-three__input-box">
+					<input
+						type="number"
+						name="hostel_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Transport Fee</h4>
+				<div class="contact-three__input-box">
+					<input
+						type="number"
+						name="transport_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Other Fee</h4>
+				<div class="contact-three__input-box">
+					<input
+						type="number"
+						name="other_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+			</div>
+			<div class="col-xl-6 col-lg-6">
+				<h4 class="contact-three__input-title">Balance Fee</h4>
+				<div class="contact-three__input-box">
+					<input
+						type="number"
+						name="balance_fee"
+						class="w-full px-3 py-2 border rounded-lg"
+						value="0"
+					/>
+				</div>
+			</div>
+
+				<div class="category-two__btn-box" style="margin-bottom: 30px;">
+					<button class="category-two__btn thm-btn">
+						Add Student
+						<span class="icon-circle-left"></span>
+                    </button>
+				</div>
+			{% comment %}
+			<div class="category-two__btn-box">
+				<a href="course-details.html" class="category-two__btn thm-btn">
+					<button
+						style="
+							margin-bottom: 30px;
+							background-color: transparent;
+							border: none;
+							border-radius: none;
+						"
+					>
+						Add Student
+					</button>
+					<span class="icon-circle-left"></span>
+				</a>
+			</div>
+			{% endcomment %}
+		</form>
+	</div>
+</div>
+{% endblock body %}

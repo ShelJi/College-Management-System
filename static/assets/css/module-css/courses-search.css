@@ -1,0 +1,113 @@
+/*--------------------------------------------------------------
+# Courses Search
+--------------------------------------------------------------*/
+.courses-search {
+    position: relative;
+    display: block;
+    background: linear-gradient(105.09deg, #F9F5F6 0%, rgba(238, 241, 255, 0.92549) 50%, #F9F5F6 100%);
+    padding: 120px 0 120px;
+    z-index: 2;
+}
+
+.courses-search__shape-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.courses-search__inner {
+    position: relative;
+    display: block;
+}
+
+.courses-search__form {
+    position: relative;
+    display: block;
+}
+
+.courses-search__input-box {
+    position: relative;
+    display: block;
+    margin-bottom: 24px;
+}
+
+.courses-search__input-box .select-box .nice-select {
+    background-color: var(--fistudy-white);
+    color: var(--fistudy-gray);
+    font-size: 16px;
+    font-weight: 400;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    margin-bottom: 0px;
+    border-radius: 10px;
+}
+
+.courses-search__input-box .select-box .nice-select:after {
+    position: absolute;
+    right: 30px;
+}
+
+.courses-search__input-box {
+    position: relative;
+    display: block;
+}
+
+.courses-search__input-box input[type="search"] {
+    font-size: 16px;
+    color: var(--fistudy-gray);
+    font-weight: 400;
+    height: 60px;
+    width: 100%;
+    background: var(--fistudy-white);
+    border: none;
+    outline: none;
+    padding: 0 20px 0;
+    padding-right: 70px;
+    border-radius: 10px;
+}
+
+.courses-search__search-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--fistudy-base);
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: var(--fistudy-white);
+    width: 60px;
+    padding: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.courses-search__btn-box {
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+.courses-search__btn-box .thm-btn {
+    border: none;
+}
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+# End
+--------------------------------------------------------------*/

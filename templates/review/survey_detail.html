@@ -1,0 +1,45 @@
+{% extends 'base/base.html' %}
+
+{% block body %}
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+<div class="container mt-5">
+    <h2 class="fw-bold text-center">Survey Response Details</h2>
+    <div class="card shadow-sm mt-4">
+        <div class="card-body">
+            <h5 class="card-title">Survey by: {{ surveys.user.get_full_name }}</h5>
+            <p class="text-muted">Submitted on: {{ surveys.submitted_at|date:"F d, Y H:i A" }}</p>
+
+            <hr>
+            <h4 class="fw-bold">Responses</h4>
+            <ul class="list-group">
+                <li class="list-group-item"><strong>1. Syllabus Covered:</strong> {{ surveys.syllabus_coverage }}</li>
+                <li class="list-group-item"><strong>2. Teacher's Preparation:</strong> {{ surveys.teacher_preparation }}</li>
+                <li class="list-group-item"><strong>3. Communication Skills:</strong> {{ surveys.teacher_communication }}</li>
+                <li class="list-group-item"><strong>4. Teaching Approach:</strong> {{ surveys.teaching_approach }}</li>
+                <li class="list-group-item"><strong>5. Internal Evaluation Fairness:</strong> {{ surveys.evaluation_fairness }}</li>
+                <li class="list-group-item"><strong>6. Assignments Discussion:</strong> {{ surveys.assignment_discussion }}</li>
+                <li class="list-group-item"><strong>7. Internship & Field Opportunities:</strong> {{ surveys.internship_opportunities }}</li>
+                <li class="list-group-item"><strong>8. Mentoring Effectiveness:</strong> {{ surveys.mentoring_effectiveness }}</li>
+                <li class="list-group-item"><strong>9. Learning Opportunities:</strong> {{ surveys.learning_opportunities }}</li>
+                <li class="list-group-item"><strong>10. Principal Quality:</strong> {{ surveys.principal_quality }}</li>
+                <li class="list-group-item"><strong>11. Use of ICT Tools:</strong> {{ surveys.ict_usage }}</li>
+                <li class="list-group-item"><strong>12. Overall Teaching Quality:</strong> {{ surveys.overall_quality }}</li>
+            </ul>
+
+            <div class="mt-4 text-center">
+                <a href="{% url 'review:survey_list' %}" class="btn btn-secondary">Back to Surveys</a>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

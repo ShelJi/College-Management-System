@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %} {% block body %} {% comment %} {% if request.user.is_authenticated %}
+
+<form action="{% url 'accounts:logout' %}" method="post">
+	{% csrf_token %}
+	<h1>{{ request.user }}</h1>
+
+	<a href="{% url 'student_dashboard:dashboard' %}">student_dashboard</a>
+	<a href="{% url 'staff_dashboard:dashboard' %}">staff_dashboard</a>
+
+	<button type="submit">logout</button>
+</form>
+
+{% else %}
+
+<a href="{% url 'accounts:login' %}">login</a>
+
+{% endif %} {% endcomment %} 
+
+{% include 'section/banner2.html' %} 
+{% include 'section/about.html' %}
+{% include 'section/principal.html' %} 
+{% include "section/category.html" %} 
+
+{% endblock body %}

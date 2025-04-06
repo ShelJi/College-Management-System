@@ -1,0 +1,60 @@
+{% extends 'base/base.html' %}
+{% block body %}
+<div
+    style="
+        margin-top: 111px;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    "
+>
+    <div
+        class="container mx-auto my-10 p-6 max-w-6xl bg-white shadow-lg rounded-lg"
+        style="padding: 100px"
+    >
+        <h2 class="text-2xl font-semibold text-center mb-6">Exam Result</h2>
+
+        <table class="w-full border-collapse border border-gray-300 shadow-md" style="margin: 30px">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="border border-gray-300 p-3 text-left">Exam</th>
+                    <th class="border border-gray-300 p-3 text-left">Student</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 1</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 2</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 3</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 4</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 5</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 6</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 7</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 8</th>
+                    <th class="border border-gray-300 p-3 text-left">Mark Subject 9</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if results %}
+                {% for result in results %}
+                <tr class="border border-gray-300">
+                    <td class="p-3">{{ result.exam }}</td>
+                    <td class="p-3">{{ result.user.username }}</td>
+                    <td class="p-3">{{ result.mark_subject1 }}</td>
+                    <td class="p-3">{{ result.mark_subject2 }}</td>
+                    <td class="p-3">{{ result.mark_subject3 }}</td>
+                    <td class="p-3">{{ result.mark_subject4 }}</td>
+                    <td class="p-3">{{ result.mark_subject5 }}</td>
+                    <td class="p-3">{{ result.mark_subject6 }}</td>
+                    <td class="p-3">{{ result.mark_subject7 }}</td>
+                    <td class="p-3">{{ result.mark_subject8 }}</td>
+                    <td class="p-3">{{ result.mark_subject9 }}</td>
+                </tr>
+                {% endfor %}
+                {% else %}
+                <tr><td colspan="10">No data</td></tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock body %}
+

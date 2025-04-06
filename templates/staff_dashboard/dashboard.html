@@ -1,0 +1,1240 @@
+{% extends 'base/base.html' %} {% block body %}
+
+<div
+	style="
+		margin-top: 111px;
+		min-height: 80vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	"
+>
+	<div
+		class="col-md-6 grid-margin stretch-card"
+		style="
+			box-sizing: border-box;
+			text-shadow: none;
+			box-shadow: none;
+			flex: 0 0 auto;
+			width: 619.5px;
+			max-width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-top: var(--bs-gutter-y);
+			margin-bottom: 2.5rem;
+			display: flex;
+			align-items: stretch;
+			justify-content: stretch;
+			color: rgb(31, 31, 31);
+			font-family: Nunito, sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-variant-ligatures: normal;
+			font-variant-caps: normal;
+			font-weight: 400;
+			letter-spacing: normal;
+			orphans: 2;
+			text-align: start;
+			text-indent: 0px;
+			text-transform: none;
+			widows: 2;
+			word-spacing: 0px;
+			-webkit-text-stroke-width: 0px;
+			white-space: normal;
+			background-color: rgb(245, 247, 255);
+			text-decoration-thickness: initial;
+			text-decoration-style: initial;
+			text-decoration-color: initial;
+		"
+	>
+		<div
+			class="card tale-bg"
+			style="
+				box-sizing: border-box;
+				text-shadow: none;
+				box-shadow: none;
+				--bs-card-spacer-y: 1rem;
+				--bs-card-spacer-x: 1rem;
+				--bs-card-title-spacer-y: 0.5rem;
+				--bs-card-title-color: #010101;
+				--bs-card-subtitle-color: ;
+				--bs-card-border-width: var(--bs-border-width);
+				--bs-card-border-color: #e3e3e3;
+				--bs-card-border-radius: 20px;
+				--bs-card-box-shadow: none;
+				--bs-card-inner-border-radius: calc(
+					var(--bs-border-radius) - (var(--bs-border-width))
+				);
+				--bs-card-cap-padding-y: 0.5rem;
+				--bs-card-cap-padding-x: 1rem;
+				--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+				--bs-card-cap-color: ;
+				--bs-card-height: ;
+				--bs-card-color: ;
+				--bs-card-bg: var(--bs-body-bg);
+				--bs-card-img-overlay-padding: 1rem;
+				--bs-card-group-margin: 0.75rem;
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				min-width: 100%;
+				height: var(--bs-card-height);
+				color: var(--bs-body-color);
+				overflow-wrap: break-word;
+				background: rgb(218, 231, 255);
+				border: none;
+				border-radius: var(--bs-card-border-radius);
+				transition: background 0.25s;
+				width: 589.5px;
+			"
+		>
+			<div
+				class="card-people mt-auto"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					margin-top: auto !important;
+					position: relative;
+					padding-top: 20px;
+				"
+				>
+				<br class="Apple-interchange-newline" /><img
+					src="https://demo.bootstrapdash.com/skydash-free/themes/assets/images/dashboard/people.svg"
+					alt="people"
+					style="
+						box-sizing: border-box;
+						vertical-align: middle;
+						border-radius: 20px;
+						width: 589.5px;
+					"
+				/>
+				<div
+					class="weather-info"
+					style="
+						box-sizing: border-box;
+						text-shadow: none;
+						box-shadow: none;
+						position: absolute;
+						top: 30px;
+						right: 24px;
+					"
+				>
+					<div
+						class="d-flex"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							display: flex !important;
+						"
+					>
+						<div style="box-sizing: border-box; text-shadow: none; box-shadow: none">
+							<h2
+								class="mb-0 fw-normal"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0px !important;
+									font-weight: 400 !important;
+									line-height: 1;
+									color: var(--bs-heading-color);
+									font-size: 2.187rem;
+									text-shadow: none;
+								"
+							>
+								<i
+									class="icon-sun me-2"
+									style="
+										box-sizing: border-box;
+										display: inline-block;
+										font-family: feather;
+										font-style: normal;
+										font-weight: normal;
+										font-variant: normal;
+										text-transform: none;
+										speak: none;
+										line-height: 1;
+										-webkit-font-smoothing: antialiased;
+										margin-right: 0.5rem !important;
+									"
+								></i
+								><sup
+									style="
+										box-sizing: border-box;
+										position: relative;
+										font-size: 18px;
+										line-height: 0;
+										vertical-align: baseline;
+										top: -0.5em;
+									"
+									>⭐</sup
+								>
+							</h2>
+						</div>
+						<div
+							class="ms-2"
+							style="
+								box-sizing: border-box;
+								text-shadow: none;
+								box-shadow: none;
+								margin-left: 0.5rem !important;
+							"
+						>
+							<h4
+								class="location fw-normal"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0px;
+									font-weight: 400 !important;
+									line-height: 1;
+									color: var(--bs-heading-color);
+									font-size: 20px;
+									text-shadow: none;
+								"
+							>
+								NICAS
+							</h4>
+							<h6
+								class="fw-normal"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem;
+									font-weight: 400 !important;
+									line-height: 1;
+									color: var(--bs-heading-color);
+									font-size: 0.9375rem;
+								"
+							></h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div
+		class="col-md-6 grid-margin transparent"
+		style="
+			box-sizing: border-box;
+			text-shadow: none;
+			box-shadow: none;
+			flex: 0 0 auto;
+			width: 619.5px;
+			max-width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-top: var(--bs-gutter-y);
+			margin-bottom: 2.5rem;
+			color: rgb(31, 31, 31);
+			font-family: Nunito, sans-serif;
+			font-size: 16px;
+			font-style: normal;
+			font-variant-ligatures: normal;
+			font-variant-caps: normal;
+			font-weight: 400;
+			letter-spacing: normal;
+			orphans: 2;
+			text-align: start;
+			text-indent: 0px;
+			text-transform: none;
+			widows: 2;
+			word-spacing: 0px;
+			-webkit-text-stroke-width: 0px;
+			white-space: normal;
+			background-color: rgb(245, 247, 255);
+			text-decoration-thickness: initial;
+			text-decoration-style: initial;
+			text-decoration-color: initial;
+		"
+	>
+		<div
+			class="row"
+			style="
+				box-sizing: border-box;
+				text-shadow: none;
+				box-shadow: none;
+				--bs-gutter-x: 30px;
+				--bs-gutter-y: 0;
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: calc(-1 * var(--bs-gutter-y));
+				margin-right: calc(-0.5 * var(--bs-gutter-x));
+				margin-left: calc(-0.5 * var(--bs-gutter-x));
+			"
+		>
+			<div
+				class="col-md-6 mb-4 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					margin-bottom: 1.5rem !important;
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+			>
+				<a href="{% url 'staff_dashboard:add_student' %}">
+					<div
+						class="card card-tale"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							--bs-card-spacer-y: 1rem;
+							--bs-card-spacer-x: 1rem;
+							--bs-card-title-spacer-y: 0.5rem;
+							--bs-card-title-color: #010101;
+							--bs-card-subtitle-color: ;
+							--bs-card-border-width: var(--bs-border-width);
+							--bs-card-border-color: #e3e3e3;
+							--bs-card-border-radius: 20px;
+							--bs-card-box-shadow: none;
+							--bs-card-inner-border-radius: calc(
+								var(--bs-border-radius) - (var(--bs-border-width))
+							);
+							--bs-card-cap-padding-y: 0.5rem;
+							--bs-card-cap-padding-x: 1rem;
+							--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+							--bs-card-cap-color: ;
+							--bs-card-height: ;
+							--bs-card-color: ;
+							--bs-card-bg: var(--bs-body-bg);
+							--bs-card-img-overlay-padding: 1rem;
+							--bs-card-group-margin: 0.75rem;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							min-width: 100%;
+							height: var(--bs-card-height);
+							color: rgb(255, 255, 255);
+							overflow-wrap: break-word;
+							background: rgb(125, 160, 250);
+							border: none;
+							border-radius: var(--bs-card-border-radius);
+							transition: background 0.25s;
+							width: 279.75px;
+						"
+					>
+						<div
+							class="card-body"
+							style="
+								box-sizing: border-box;
+								text-shadow: none;
+								box-shadow: none;
+								flex: 1 1 auto;
+								padding: 1.25rem;
+								color: var(--bs-card-color);
+							"
+						>
+							<p
+								class="mb-4"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 1.5rem !important;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								⭐
+							</p>
+							<p
+								class="fs-30 mb-2"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem !important;
+									text-shadow: none;
+									font-size: 30px;
+									line-height: 1.3rem;
+								"
+							>
+								Add Students
+							</p>
+							<p
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								________________________
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div
+				class="col-md-6 mb-4 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					margin-bottom: 1.5rem !important;
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+			>
+				<a href="{% url 'staff_dashboard:list_students' %}">
+					<div
+						class="card card-dark-blue"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							--bs-card-spacer-y: 1rem;
+							--bs-card-spacer-x: 1rem;
+							--bs-card-title-spacer-y: 0.5rem;
+							--bs-card-title-color: #010101;
+							--bs-card-subtitle-color: ;
+							--bs-card-border-width: var(--bs-border-width);
+							--bs-card-border-color: #e3e3e3;
+							--bs-card-border-radius: 20px;
+							--bs-card-box-shadow: none;
+							--bs-card-inner-border-radius: calc(
+								var(--bs-border-radius) - (var(--bs-border-width))
+							);
+							--bs-card-cap-padding-y: 0.5rem;
+							--bs-card-cap-padding-x: 1rem;
+							--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+							--bs-card-cap-color: ;
+							--bs-card-height: ;
+							--bs-card-color: ;
+							--bs-card-bg: var(--bs-body-bg);
+							--bs-card-img-overlay-padding: 1rem;
+							--bs-card-group-margin: 0.75rem;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							min-width: 100%;
+							height: var(--bs-card-height);
+							color: rgb(255, 255, 255);
+							overflow-wrap: break-word;
+							background: rgb(71, 71, 161);
+							border: none;
+							border-radius: var(--bs-card-border-radius);
+							transition: background 0.25s;
+							width: 279.75px;
+						"
+					>
+						<div
+							class="card-body"
+							style="
+								box-sizing: border-box;
+								text-shadow: none;
+								box-shadow: none;
+								flex: 1 1 auto;
+								padding: 1.25rem;
+								color: var(--bs-card-color);
+							"
+						>
+							<p
+								class="mb-4"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 1.5rem !important;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								⭐
+							</p>
+							<p
+								class="fs-30 mb-2"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem !important;
+									text-shadow: none;
+									font-size: 30px;
+									line-height: 1.3rem;
+								"
+							>
+								List Students
+							</p>
+							<p
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								________________________
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+		
+		
+		{% comment %} next row {% endcomment %}
+		
+		<div
+			class="row"
+			style="
+				box-sizing: border-box;
+				text-shadow: none;
+				box-shadow: none;
+				--bs-gutter-x: 30px;
+				--bs-gutter-y: 0;
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: calc(-1 * var(--bs-gutter-y));
+				margin-right: calc(-0.5 * var(--bs-gutter-x));
+				margin-left: calc(-0.5 * var(--bs-gutter-x));
+			"
+		>
+			<div
+				class="col-md-6 mb-4 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					margin-bottom: 1.5rem !important;
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+			>
+				<a href="{% url 'exam:all_exam' %}">
+					<div
+						class="card card-tale"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							--bs-card-spacer-y: 1rem;
+							--bs-card-spacer-x: 1rem;
+							--bs-card-title-spacer-y: 0.5rem;
+							--bs-card-title-color: #010101;
+							--bs-card-subtitle-color: ;
+							--bs-card-border-width: var(--bs-border-width);
+							--bs-card-border-color: #e3e3e3;
+							--bs-card-border-radius: 20px;
+							--bs-card-box-shadow: none;
+							--bs-card-inner-border-radius: calc(
+								var(--bs-border-radius) - (var(--bs-border-width))
+							);
+							--bs-card-cap-padding-y: 0.5rem;
+							--bs-card-cap-padding-x: 1rem;
+							--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+							--bs-card-cap-color: ;
+							--bs-card-height: ;
+							--bs-card-color: ;
+							--bs-card-bg: var(--bs-body-bg);
+							--bs-card-img-overlay-padding: 1rem;
+							--bs-card-group-margin: 0.75rem;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							min-width: 100%;
+							height: var(--bs-card-height);
+							color: rgb(255, 255, 255);
+							overflow-wrap: break-word;
+							background: rgb(125, 160, 250);
+							border: none;
+							border-radius: var(--bs-card-border-radius);
+							transition: background 0.25s;
+							width: 279.75px;
+						"
+					>
+						<div
+							class="card-body"
+							style="
+								box-sizing: border-box;
+								text-shadow: none;
+								box-shadow: none;
+								flex: 1 1 auto;
+								padding: 1.25rem;
+								color: var(--bs-card-color);
+							"
+						>
+							<p
+								class="mb-4"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 1.5rem !important;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								⭐
+							</p>
+							<p
+								class="fs-30 mb-2"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem !important;
+									text-shadow: none;
+									font-size: 30px;
+									line-height: 1.3rem;
+								"
+							>
+								Exams
+							</p>
+							<p
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								________________________
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div
+				class="col-md-6 mb-4 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					margin-bottom: 1.5rem !important;
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+				>
+				<a href="{% url 'review:all_reviews' %}">
+					<div
+						class="card card-dark-blue"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							--bs-card-spacer-y: 1rem;
+							--bs-card-spacer-x: 1rem;
+							--bs-card-title-spacer-y: 0.5rem;
+							--bs-card-title-color: #010101;
+							--bs-card-subtitle-color: ;
+							--bs-card-border-width: var(--bs-border-width);
+							--bs-card-border-color: #e3e3e3;
+							--bs-card-border-radius: 20px;
+							--bs-card-box-shadow: none;
+							--bs-card-inner-border-radius: calc(
+								var(--bs-border-radius) - (var(--bs-border-width))
+							);
+							--bs-card-cap-padding-y: 0.5rem;
+							--bs-card-cap-padding-x: 1rem;
+							--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+							--bs-card-cap-color: ;
+							--bs-card-height: ;
+							--bs-card-color: ;
+							--bs-card-bg: var(--bs-body-bg);
+							--bs-card-img-overlay-padding: 1rem;
+							--bs-card-group-margin: 0.75rem;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							min-width: 100%;
+							height: var(--bs-card-height);
+							color: rgb(255, 255, 255);
+							overflow-wrap: break-word;
+							background: rgb(71, 71, 161);
+							border: none;
+							border-radius: var(--bs-card-border-radius);
+							transition: background 0.25s;
+							width: 279.75px;
+						"
+					>
+						<div
+							class="card-body"
+							style="
+								box-sizing: border-box;
+								text-shadow: none;
+								box-shadow: none;
+								flex: 1 1 auto;
+								padding: 1.25rem;
+								color: var(--bs-card-color);
+							"
+						>
+							<p
+								class="mb-4"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 1.5rem !important;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								⭐
+							</p>
+							<p
+								class="fs-30 mb-2"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem !important;
+									text-shadow: none;
+									font-size: 30px;
+									line-height: 1.3rem;
+								"
+							>
+								Reviews
+							</p>
+							<p
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								________________________
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+
+
+			<div
+			class="row"
+			style="
+				box-sizing: border-box;
+				text-shadow: none;
+				box-shadow: none;
+				--bs-gutter-x: 30px;
+				--bs-gutter-y: 0;
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: calc(-1 * var(--bs-gutter-y));
+				margin-right: calc(-0.5 * var(--bs-gutter-x));
+				margin-left: calc(-0.5 * var(--bs-gutter-x));
+			"
+			>
+			<div
+				class="col-md-6 mb-4 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					margin-bottom: 1.5rem !important;
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+				>
+				<a href="{% url 'exam:create_result' %}">
+					<div
+						class="card card-tale"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							--bs-card-spacer-y: 1rem;
+							--bs-card-spacer-x: 1rem;
+							--bs-card-title-spacer-y: 0.5rem;
+							--bs-card-title-color: #010101;
+							--bs-card-subtitle-color: ;
+							--bs-card-border-width: var(--bs-border-width);
+							--bs-card-border-color: #e3e3e3;
+							--bs-card-border-radius: 20px;
+							--bs-card-box-shadow: none;
+							--bs-card-inner-border-radius: calc(
+								var(--bs-border-radius) - (var(--bs-border-width))
+							);
+							--bs-card-cap-padding-y: 0.5rem;
+							--bs-card-cap-padding-x: 1rem;
+							--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+							--bs-card-cap-color: ;
+							--bs-card-height: ;
+							--bs-card-color: ;
+							--bs-card-bg: var(--bs-body-bg);
+							--bs-card-img-overlay-padding: 1rem;
+							--bs-card-group-margin: 0.75rem;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							min-width: 100%;
+							height: var(--bs-card-height);
+							color: rgb(255, 255, 255);
+							overflow-wrap: break-word;
+							background: rgb(125, 160, 250);
+							border: none;
+							border-radius: var(--bs-card-border-radius);
+							transition: background 0.25s;
+							width: 279.75px;
+						"
+					>
+						<div
+							class="card-body"
+							style="
+								box-sizing: border-box;
+								text-shadow: none;
+								box-shadow: none;
+								flex: 1 1 auto;
+								padding: 1.25rem;
+								color: var(--bs-card-color);
+							"
+						>
+							<p
+								class="mb-4"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 1.5rem !important;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								⭐
+							</p>
+							<p
+								class="fs-30 mb-2"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem !important;
+									text-shadow: none;
+									font-size: 30px;
+									line-height: 1.3rem;
+								"
+							>
+								Result
+							</p>
+							<p
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								________________________
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div
+				class="col-md-6 mb-4 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					margin-bottom: 1.5rem !important;
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+			>
+				<a href="{% url 'review:survey_list' %}">
+					<div
+						class="card card-dark-blue"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							--bs-card-spacer-y: 1rem;
+							--bs-card-spacer-x: 1rem;
+							--bs-card-title-spacer-y: 0.5rem;
+							--bs-card-title-color: #010101;
+							--bs-card-subtitle-color: ;
+							--bs-card-border-width: var(--bs-border-width);
+							--bs-card-border-color: #e3e3e3;
+							--bs-card-border-radius: 20px;
+							--bs-card-box-shadow: none;
+							--bs-card-inner-border-radius: calc(
+								var(--bs-border-radius) - (var(--bs-border-width))
+							);
+							--bs-card-cap-padding-y: 0.5rem;
+							--bs-card-cap-padding-x: 1rem;
+							--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+							--bs-card-cap-color: ;
+							--bs-card-height: ;
+							--bs-card-color: ;
+							--bs-card-bg: var(--bs-body-bg);
+							--bs-card-img-overlay-padding: 1rem;
+							--bs-card-group-margin: 0.75rem;
+							position: relative;
+							display: flex;
+							flex-direction: column;
+							min-width: 100%;
+							height: var(--bs-card-height);
+							color: rgb(255, 255, 255);
+							overflow-wrap: break-word;
+							background: rgb(71, 71, 161);
+							border: none;
+							border-radius: var(--bs-card-border-radius);
+							transition: background 0.25s;
+							width: 279.75px;
+						"
+					>
+						<div
+							class="card-body"
+							style="
+								box-sizing: border-box;
+								text-shadow: none;
+								box-shadow: none;
+								flex: 1 1 auto;
+								padding: 1.25rem;
+								color: var(--bs-card-color);
+							"
+						>
+							<p
+								class="mb-4"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 1.5rem !important;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								⭐
+							</p>
+							<p
+								class="fs-30 mb-2"
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem !important;
+									text-shadow: none;
+									font-size: 30px;
+									line-height: 1.3rem;
+								"
+							>
+								Survey
+							</p>
+							<p
+								style="
+									box-sizing: border-box;
+									margin-top: 0px;
+									margin-bottom: 0.5rem;
+									text-shadow: none;
+									font-size: 0.875rem;
+									line-height: 1.3rem;
+								"
+							>
+								________________________
+							</p>
+						</div>
+					</div>
+				</a>
+			</div>
+
+
+			
+
+
+		</div>
+
+
+
+		</div>
+		{% comment %}
+		<div
+			class="row"
+			style="
+				box-sizing: border-box;
+				text-shadow: none;
+				box-shadow: none;
+				--bs-gutter-x: 30px;
+				--bs-gutter-y: 0;
+				display: flex;
+				flex-wrap: wrap;
+				margin-top: calc(-1 * var(--bs-gutter-y));
+				margin-right: calc(-0.5 * var(--bs-gutter-x));
+				margin-left: calc(-0.5 * var(--bs-gutter-x));
+			"
+		>
+			<div
+				class="col-md-6 mb-4 mb-lg-0 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					margin-bottom: 0px !important;
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+			>
+				<div
+					class="card card-light-blue"
+					style="
+						box-sizing: border-box;
+						text-shadow: none;
+						box-shadow: none;
+						--bs-card-spacer-y: 1rem;
+						--bs-card-spacer-x: 1rem;
+						--bs-card-title-spacer-y: 0.5rem;
+						--bs-card-title-color: #010101;
+						--bs-card-subtitle-color: ;
+						--bs-card-border-width: var(--bs-border-width);
+						--bs-card-border-color: #e3e3e3;
+						--bs-card-border-radius: 20px;
+						--bs-card-box-shadow: none;
+						--bs-card-inner-border-radius: calc(
+							var(--bs-border-radius) - (var(--bs-border-width))
+						);
+						--bs-card-cap-padding-y: 0.5rem;
+						--bs-card-cap-padding-x: 1rem;
+						--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+						--bs-card-cap-color: ;
+						--bs-card-height: ;
+						--bs-card-color: ;
+						--bs-card-bg: var(--bs-body-bg);
+						--bs-card-img-overlay-padding: 1rem;
+						--bs-card-group-margin: 0.75rem;
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						min-width: 100%;
+						height: var(--bs-card-height);
+						color: rgb(255, 255, 255);
+						overflow-wrap: break-word;
+						background: rgb(121, 120, 233);
+						border: none;
+						border-radius: var(--bs-card-border-radius);
+						transition: background 0.25s;
+						width: 279.75px;
+					"
+				>
+					<div
+						class="card-body"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							flex: 1 1 auto;
+							padding: 1.25rem;
+							color: var(--bs-card-color);
+						"
+					>
+						<p
+							class="mb-4"
+							style="
+								box-sizing: border-box;
+								margin-top: 0px;
+								margin-bottom: 1.5rem !important;
+								text-shadow: none;
+								font-size: 0.875rem;
+								line-height: 1.3rem;
+							"
+						>
+							Number of Meetings
+						</p>
+						<p
+							class="fs-30 mb-2"
+							style="
+								box-sizing: border-box;
+								margin-top: 0px;
+								margin-bottom: 0.5rem !important;
+								text-shadow: none;
+								font-size: 30px;
+								line-height: 1.3rem;
+							"
+						>
+							34040
+						</p>
+						<p
+							style="
+								box-sizing: border-box;
+								margin-top: 0px;
+								margin-bottom: 0.5rem;
+								text-shadow: none;
+								font-size: 0.875rem;
+								line-height: 1.3rem;
+							"
+						>
+							2.00% (30 days)
+						</p>
+					</div>
+				</div>
+			</div>
+			<div
+				class="col-md-6 stretch-card transparent"
+				style="
+					box-sizing: border-box;
+					text-shadow: none;
+					box-shadow: none;
+					flex: 0 0 auto;
+					width: 309.75px;
+					max-width: 100%;
+					padding-right: calc(var(--bs-gutter-x) * 0.5);
+					padding-left: calc(var(--bs-gutter-x) * 0.5);
+					margin-top: var(--bs-gutter-y);
+					display: flex;
+					align-items: stretch;
+					justify-content: stretch;
+				"
+			>
+				<div
+					class="card card-light-danger"
+					style="
+						box-sizing: border-box;
+						text-shadow: none;
+						box-shadow: none;
+						--bs-card-spacer-y: 1rem;
+						--bs-card-spacer-x: 1rem;
+						--bs-card-title-spacer-y: 0.5rem;
+						--bs-card-title-color: #010101;
+						--bs-card-subtitle-color: ;
+						--bs-card-border-width: var(--bs-border-width);
+						--bs-card-border-color: #e3e3e3;
+						--bs-card-border-radius: 20px;
+						--bs-card-box-shadow: none;
+						--bs-card-inner-border-radius: calc(
+							var(--bs-border-radius) - (var(--bs-border-width))
+						);
+						--bs-card-cap-padding-y: 0.5rem;
+						--bs-card-cap-padding-x: 1rem;
+						--bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+						--bs-card-cap-color: ;
+						--bs-card-height: ;
+						--bs-card-color: ;
+						--bs-card-bg: var(--bs-body-bg);
+						--bs-card-img-overlay-padding: 1rem;
+						--bs-card-group-margin: 0.75rem;
+						position: relative;
+						display: flex;
+						flex-direction: column;
+						min-width: 100%;
+						height: var(--bs-card-height);
+						color: rgb(255, 255, 255);
+						overflow-wrap: break-word;
+						background: rgb(243, 121, 126);
+						border: none;
+						border-radius: var(--bs-card-border-radius);
+						transition: background 0.25s;
+						width: 279.75px;
+					"
+				>
+					<div
+						class="card-body"
+						style="
+							box-sizing: border-box;
+							text-shadow: none;
+							box-shadow: none;
+							flex: 1 1 auto;
+							padding: 1.25rem;
+							color: var(--bs-card-color);
+						"
+					>
+						<p
+							class="mb-4"
+							style="
+								box-sizing: border-box;
+								margin-top: 0px;
+								margin-bottom: 1.5rem !important;
+								text-shadow: none;
+								font-size: 0.875rem;
+								line-height: 1.3rem;
+							"
+						>
+							Number of Clients
+						</p>
+						<p
+							class="fs-30 mb-2"
+							style="
+								box-sizing: border-box;
+								margin-top: 0px;
+								margin-bottom: 0.5rem !important;
+								text-shadow: none;
+								font-size: 30px;
+								line-height: 1.3rem;
+							"
+						>
+							47033
+						</p>
+						<p
+							style="
+								box-sizing: border-box;
+								margin-top: 0px;
+								margin-bottom: 0.5rem;
+								text-shadow: none;
+								font-size: 0.875rem;
+								line-height: 1.3rem;
+							"
+						>
+							0.22% (30 days)
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endcomment %}
+	</div>
+	{% comment %}
+	<a href="{% url 'staff_dashboard:add_student' %}">add_student</a> <br />
+	<a href="{% url 'staff_dashboard:list_students' %}">list_students</a> <br />
+	{% endcomment %}
+</div>
+
+{% endblock body %}
